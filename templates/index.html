@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>官方网页</title>
+    <link href="{{ url_for( "static", filename="css/reset.css" ) }}" rel="stylesheet" />
+    <link href="{{ url_for( "static", filename="css/header.css" ) }}" rel="stylesheet" />
+    <link href="{{ url_for( "static", filename="css/index.css" ) }}" rel="stylesheet" />
+    <script src="{{ url_for( "static", filename="js/jquery.js" ) }}"></script>
+    <script src="{{ url_for( "static", filename="js/footer.js" ) }}"></script>
+    <script src="{{ url_for( "static", filename="js/index.js" ) }}"></script>
+</head>
+<body>
+	<!-- header start -->
+	<header>
+	  <div class="head">
+		<!-- logo start -->
+		<a class="logo">
+			<img src="{{ url_for( "static", filename="image/main_image/logo.png" ) }}" >
+		</a>
+		<!-- logo end -->
+
+		<!-- menu start -->
+		<div class="head-nav">
+        <ul >
+          <li>
+            <a href="#">
+              <span class="title">游戏资料</span>
+              <span class="subtitle">GAME INFO</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">商城/合作</span>
+              <span class="subtitle">STORE</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">社区互动</span>
+              <span class="subtitle">COMMUNITY</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">赛事官网</span>
+              <span class="subtitle">ESPORTS</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="title">自助系统</span>
+              <span class="subtitle">SYSTEM</span>
+            </a>
+          </li>
+        </ul>
+        <!-- 导航下拉菜单列表 -->
+        <div class="head-nav-sub">
+          <div class="head-nav-sub-inner">
+            <ul>
+              <li>
+                <a href="#">新手指引</a>
+                <a href="#" class="rh">资料库</a>
+                <a href="#">攻略中心</a>
+                <a href="#" class="yh">开发者基地</a>
+                <a href="#">海克斯战利品库</a>
+                <a href="#" class="yh">武器大师竞技场</a>
+                <a href="#">宇宙官网</a>
+              </li>
+              <li>
+                <a href="#">点卷充值</a>
+                <a href="#">道聚城</a>
+                <a href="shopping.html" class="rh">周边商城</a>
+                <a href="#">LOL桌游</a>
+                <a href="#">LOL信用卡</a>
+                <a href="#">网吧特权</a>
+                <a href="#" class="yh">电竞小说</a>
+              </li>
+              <li>
+                <a href="#">官方社区</a>
+                <a href="#">视频中心</a>
+                <a href="#">官方论坛</a>
+                <a href="#">官方微信</a>
+                <a href="#">官网微博</a>
+                <a href="#" class="yh">玩家创作馆</a>
+                <a href="#" class="yh">作者入驻计划</a>
+                <a href="#" class="yh">玩家服务</a>
+                </li>
+              <li>
+                <a href="#" class="yh">LPL职业联赛</a>
+                <a href="#">LDL发展联赛</a>
+                <a href="#">季中冠军赛</a>
+                <a href="#">洲际系列赛</a>
+                <a href="#">全球总决赛</a>
+                <a href="#">全明星赛</a>
+                <a href="#">高效联赛</a>
+                <a href="#">城市英雄争霸赛</a>
+              </li>
+              <li>
+                <a href="#">在线客服</a>
+                <a href="#" class="yh">转区系统</a>
+                <a href="#" class="rh">封号查询</a>
+                <a href="#">体验服申请</a>
+                <a href="#">回放系统</a>
+                <a href="#">服务器状态查询</a>
+                <a href="#" class="yh">秩序殿堂</a>
+                <a href="#" class="yh">峡谷之巅</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- menu end -->
+
+      <!-- userinfo start -->
+      <div class="head-user">
+        <div class="head-user-self">
+          <a href="#" class="bg">
+          	<img src="{{ url_for( "static", filename="image/main_image/default.png" ) }}" >
+          </a>
+          <span>亲爱的召唤师，欢迎<a href="#">登录</a> 
+          </span>
+        
+     	  <!-- user info —— Access to the Personal Center  -->
+          <div class="head-user-self-hover">
+            <p>登录并且绑定大区后才可以查看您的具体信息哦<br>(包括战绩、资产、声望</p>
+            <p>官网个人信息显示略有延迟，请以游戏数据为准</p>
+            <a href="login.html">进入个人中心
+            <i></i>
+            </a>
+          </div>
+        </div>
+      </div> 
+      <!-- userinfo end -->
+
+       <!-- QR code start -->
+      <span class="head-user-pic">
+        <a href="#" class="icon-phone"></a>
+      <div class="head-user-erweima">
+        <div class="head-user-erweima-pic">
+          <a href="#">
+          	  <img src="{{ url_for( "static", filename="image/main_image/zm-qrcode.jpg" ) }}" >
+          </a>
+        </div>
+        <p>扫码下载掌上英雄联盟</p>
+        <div class="polo">
+          <img src="{{ url_for( "static", filename="image/main_image/polo.gif" ) }}" >
+        </div>
+      </div>
+      </span> 
+      <!-- QR code end  -->
+
+       <!-- search start -->
+      <span class="head-user-pic2">
+        <a href="#" class="icon-search"></a>
+      </span>
+      <!-- search end -->
+
+      <div class="head-version">
+        <div>
+          当前游戏版本:<em>Ver 9.10</em>
+          <a href="#">版本详情</a>
+        </div>
+      </div>
+    </div>
+    <div class="head-bgimg clearfix">
+    </div>
+    <a href="#" class="head-link">查看详情</a>
+	</header>
+	<!-- header end -->
+
+	<!-- body start  -->
+	<div class="container floor">
+		<!-- banner start -->
+		<div class="tab-carousel">
+			<div class="carousel">
+		        <ul>
+		          <li>
+		          	<img src="{{ url_for( "static", filename="image/index_image/banner1.jpg" ) }}" >
+		          </li>
+		          <li>
+		            <img src="{{ url_for( "static", filename="image/index_image/banner2.jpg" ) }}" >
+		          </li>
+		          <li>
+		            <img src="{{ url_for( "static", filename="image/index_image/banner3.jpg" ) }}" >
+		          </li>
+		          <li>
+		            <img src="{{ url_for( "static", filename="image/index_image/banner4.jpg" ) }}" >
+		          </li>
+		          <li>
+		            <img src="{{ url_for( "static", filename="image/index_image/banner5.jpg" ) }}" >
+		          </li>
+		        </ul>
+		        <div class="carousel-list" id="carousel-lists">
+		          <span class="selected">全场半价</span>
+		          <span>战争学院全新上线</span>
+		          <span>试炼2019门票</span>
+		          <span>冠军皮肤限定</span>
+		          <span>魔法猫咪悠米</span>
+		        </div>
+		    </div>
+
+
+		    <!-- news start -->
+		    <div class="tab">
+        <div class="tab-top">
+          <ul>
+            <li class="selected">综合</li>
+            <li>广告</li>
+            <li>赛事</li>
+            <li>攻略</li>
+            <li>社区</li>
+          </ul>
+        </div>
+      <!-- 上部分 -->
+        <div class="tab-content">
+          <ul class="db">
+            <li>
+              <a href="#">
+                “520甜蜜周末”全场半价延长公告
+              </a>
+            </li>
+            <li>
+              <span class="item-type">赛事</span>
+              <a class="item-href" href="#">
+                2019LPL夏季赛赛程公布
+              </a>
+              <span class="item-time">05-25</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                全场半价客户端商城入口恢复公告
+              </a>
+              <span class="item-time">05-24</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                “520甜蜜周末”全场半价即将开启
+              </a>
+              <span class="item-time">05-20</span>
+            </li>
+            <li>
+              <span class="item-type">赛事</span>
+              <a class="item-href" href="#">
+                5月27日LPL夏季赛售票开启
+              </a>
+              <span class="item-time">05-25</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                峡谷之巅第四赛季即将结束
+              </a>
+              <span class="item-time">05-24</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                关于测试服孙悟空的技能改动详解
+              </a>
+              <span class="item-time">05-23</span>
+            </li>
+          </ul>
+          <ul class="dn">
+            <li>
+              <a href="#">
+                  峡谷之巅第四赛季奖励公告
+              </a>
+            </li>
+            <li>
+              <span class="item-type">赛事</span>
+              <a class="item-href" href="#">
+                2019LPL夏季赛赛程公布
+              </a>
+              <span class="item-time">05-25</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                全场半价客户端商城入口恢复公告
+              </a>
+              <span class="item-time">05-24</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                “520甜蜜周末”全场半价即将开启
+              </a>
+              <span class="item-time">05-20</span>
+            </li>
+            <li>
+              <span class="item-type">赛事</span>
+              <a class="item-href" href="#">
+                5月27日LPL夏季赛售票开启
+              </a>
+              <span class="item-time">05-25</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                峡谷之巅第四赛季即将结束
+              </a>
+              <span class="item-time">05-24</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                关于测试服孙悟空的技能改动详解
+              </a>
+              <span class="item-time">05-23</span>
+            </li>
+          </ul>
+          <ul class="dn">
+            <li>
+              <a href="#">
+                  英雄战棋模式将于暑期上线
+              </a>
+            </li>
+            <li>
+              <span class="item-type">赛事</span>
+              <a class="item-href" href="#">
+                  DMO能否终结连败 OMG渴望复仇LGD
+              </a>
+              <span class="item-time">05-25</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                全场半价客户端商城入口恢复公告
+              </a>
+              <span class="item-time">05-24</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                “520甜蜜周末”全场半价即将开启
+              </a>
+              <span class="item-time">05-20</span>
+            </li>
+            <li>
+              <span class="item-type">赛事</span>
+              <a class="item-href" href="#">
+                5月27日LPL夏季赛售票开启
+              </a>
+              <span class="item-time">05-25</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                峡谷之巅第四赛季即将结束
+              </a>
+              <span class="item-time">05-24</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                关于测试服孙悟空的技能改动详解
+              </a>
+              <span class="item-time">05-23</span>
+            </li>
+          </ul>
+          <ul class="dn">
+            <li>
+              <a href="#">
+                  莫德凯撒重做即达巅峰 双重玩法统治上中两路
+              </a>
+            </li>
+            <li>
+              <span class="item-type">赛事</span>
+              <a class="item-href" href="#">
+                2019LPL夏季赛赛程公布
+              </a>
+              <span class="item-time">05-25</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                全场半价客户端商城入口恢复公告
+              </a>
+              <span class="item-time">05-24</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                “520甜蜜周末”全场半价即将开启
+              </a>
+              <span class="item-time">05-20</span>
+            </li>
+            <li>
+              <span class="item-type">赛事</span>
+              <a class="item-href" href="#">
+                5月27日LPL夏季赛售票开启
+              </a>
+              <span class="item-time">05-25</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                峡谷之巅第四赛季即将结束
+              </a>
+              <span class="item-time">05-24</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                关于测试服孙悟空的技能改动详解
+              </a>
+              <span class="item-time">05-23</span>
+            </li>
+          </ul>
+          <ul class="dn">
+            <li>
+              <a href="#">
+                狼王发威塔下一秀二 群恐撕咬极限反杀
+              </a>
+            </li>
+            <li>
+              <span class="item-type">赛事</span>
+              <a class="item-href" href="#">
+                  电竞小说《我的时代》224章：司马仪送钩
+              </a>
+              <span class="item-time">05-25</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                全场半价客户端商城入口恢复公告
+              </a>
+              <span class="item-time">05-24</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                “520甜蜜周末”全场半价即将开启
+              </a>
+              <span class="item-time">05-20</span>
+            </li>
+            <li>
+              <span class="item-type">赛事</span>
+              <a class="item-href" href="#">
+                5月27日LPL夏季赛售票开启
+              </a>
+              <span class="item-time">05-25</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                峡谷之巅第四赛季即将结束
+              </a>
+              <span class="item-time">05-24</span>
+            </li>
+            <li>
+              <span class="item-type">公告</span>
+              <a class="item-href" href="#">
+                关于测试服孙悟空的技能改动详解
+              </a>
+              <span class="item-time">05-23</span>
+            </li>
+          </ul>
+          <a class="tab-bottom" href="#">
+            <span>阅读最多</span>
+            <span>最新资讯</span>
+            <i></i>
+          </a>
+        </div>
+      </div>
+	</div>
+	<!-- banner end -->
+
+	<!-- 热门活动 -->
+	<div class="m-act">
+      <div class="m-act-top">
+        <!-- 上部分左边 -->
+        <div class="m-act-top-left">
+          <div class="m-act-title">
+            <h2>热门活动</h2>
+            <ul>
+              <li class="selected">正在进行</li>
+              <li>商城活动</li>
+              <li>长期活动</li>
+            </ul>
+            <a href="#">
+              更多<i></i>
+            </a>
+          </div>
+          <div class="m-act-list">
+            <ul class="db">
+              <li>
+                <a href="#">
+                	<img src="{{ url_for( "static", filename="image/index_image/actlist1.jpg" ) }}" alt="" title="LPL夏季赛售票开启" >
+                </a>
+                <p class="titlelist">LPL春季赛售票开启</p>
+                <a href="#" class="timing">82天后结束</a>
+                <em></em>
+                <div class="mask">
+                  <div class="mask-news">
+                    <h3>季中英雄大礼</h3>
+                    <p>试炼2019为荣誉而战</p>
+                    <p>2019-05-04 - 2019-09-01</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="{{ url_for( "static", filename="image/index_image/actlist2.jpg" ) }}" alt="" title="LPL夏季赛售票开启" >
+                </a>
+                <p class="titlelist">LPL春季赛开启</p>
+                <a href="#" class="timing">82天后结束</a>
+                <em></em>
+                <div class="mask">
+                  <div class="mask-news">
+                    <h3>季中英雄大礼</h3>
+                    <p>试炼2019为荣誉而战</p>
+                    <p>2019-05-04 - 2019-09-01</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="{{ url_for( "static", filename="image/index_image/actlist3.jpg" ) }}" alt="" title="MSI训练" >
+                </a>
+                <p class="titlelist">MSI训练</p>
+                <a href="#" class="timing">82天后结束</a>
+                <em></em>
+                <div class="mask">
+                  <div class="mask-news">
+                    <h3>季中英雄大礼</h3>
+                    <p>试炼2019为荣誉而战</p>
+                    <p>2019-05-04 - 2019-09-01</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="{{ url_for( "static", filename="image/index_image/actlist4.jpg" ) }}" alt="" title="季度训练" >
+                </a>
+                <p class="titlelist">季度训练</p>
+                <a href="#" class="timing">82天后结束</a>
+                <em></em>
+                <div class="mask">
+                  <div class="mask-news">
+                    <h3>季中英雄大礼</h3>
+                    <p>试炼2019为荣誉而战</p>
+                    <p>2019-05-04 - 2019-09-01</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <ul class="dn">
+              <li>
+                <a href="#">
+                  <img src="{{ url_for( "static", filename="image/index_image/actlist1.jpg" ) }}" alt="" title="LPL夏季赛售票开启" >
+                </a>
+                <p class="titlelist">LPL春季赛售票开启</p>
+                <a href="#" class="timing">82天后结束</a>
+                <em></em>
+                <div class="mask">
+                  <div class="mask-news">
+                    <h3>季中英雄大礼</h3>
+                    <p>试炼2019为荣誉而战</p>
+                    <p>2019-05-04 - 2019-09-01</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="{{ url_for( "static", filename="image/index_image/actlist2.jpg" ) }}" alt="" title="LPL夏季赛售票开启" >
+                </a>
+                <p class="titlelist">LPL春季赛开启</p>
+                <a href="#" class="timing">82天后结束</a>
+                <em></em>
+                <div class="mask">
+                  <div class="mask-news">
+                    <h3>季中英雄大礼</h3>
+                    <p>试炼2019为荣誉而战</p>
+                    <p>2019-05-04 - 2019-09-01</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="{{ url_for( "static", filename="image/index_image/actlist4.jpg" ) }}" alt="" title="LPL夏季赛售票开启" >
+                </a>
+                <p class="titlelist">MSI训练</p>
+                <a href="#" class="timing">82天后结束</a>
+                <em></em>
+                <div class="mask">
+                  <div class="mask-news">
+                    <h3>季中英雄大礼</h3>
+                    <p>试炼2019为荣誉而战</p>
+                    <p>2019-05-04 - 2019-09-01</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="{{ url_for( "static", filename="image/index_image/actlist2.jpg" ) }}" alt="" title="季度训练" >
+                </a>
+                <p class="titlelist">季度训练</p>
+                <a href="#" class="timing">82天后结束</a>
+                <em></em>
+                <div class="mask">
+                  <div class="mask-news">
+                    <h3>季中英雄大礼</h3>
+                    <p>试炼2019为荣誉而战</p>
+                    <p>2019-05-04 - 2019-09-01</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 上部分右边 -->
+        <div class="m-act-top-right">
+          <ul>
+            <li>
+              <a href="#"></a>
+            </li>
+            <li class="p1 flashmen">
+              <a href="#">新手必备</a>
+            </li>
+            <li class="p2 flashmen">
+              <a href="#">领取中心</a>
+            </li>
+            <li class="p3">
+              <em></em>
+              <a href="#">在线客服</a>
+            </li>
+            <li class="p3">
+              <em></em>
+              <a href="#">秩序殿堂</a>
+            </li>
+            <li class="p3">
+              <em></em>
+              <a href="#">游戏资料</a>
+            </li>
+            <li class="p4">
+              <em></em>
+              <a href="#">峡谷之巅</a>
+            </li>
+            <li class="p3">
+              <em class="icon"></em>
+              <a href="#">微信绑定</a>
+              <em class="news"></em>
+            </li>
+            <li class="p3">
+              <em></em>
+              <a href="#">LOL宇宙</a>
+            </li>
+            <li class="p4">
+              <em></em>
+              <a href="#">玩家社区</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 下半部分开始 -->
+      <div class="m-act-bottom">
+        <div class="m-act-bottom-left">
+          <div class="champion-one">
+            <p>“嗷呜！我是一头山地狮！”</p>
+            <p>
+              <a href="#" class="magiccat">魔法猫咪 悠米</a>
+            </p>
+            <img src="{{ url_for( "static", filename="image/index_image/champion1.jpg" ) }}" alt="" >
+            <a href="#" class="newhero">新英雄</a>
+            <div class="mask-magiccat">
+              <em></em>
+              <p>魔法猫咪 悠米</p>
+              <ul>
+                <li>
+                  难度 :
+                  <span>
+                    <em></em>
+                  </span>
+                </li>
+                <li>
+                  物理攻击 :
+                  <span>
+                    <em></em>
+                  </span>
+                </li>
+                <li>
+                  防御能力 :
+                  <span>
+                    <em style="width: 20px"></em>
+                  </span>
+                </li>
+                <li>
+                  魔法攻击 :
+                  <span>
+                    <em style="width: 60px"></em>
+                  </span>
+                </li>
+              </ul>
+              <a href="#">
+                查看详情
+                <i></i>
+              </a>
+            </div>
+          </div>
+          <!-- 新英雄板块完成 -->
+          <div class="champion-one">
+            <p>我是要成为英雄的人！</p>
+            <p>
+              <a href="#" class="magiccat">战斗学院</a>
+            </p>
+            <img src="{{ url_for( "static", filename="image/index_image/champion2.jpg" ) }}" alt="" class="newskin">
+            <a href="#" class="newhero">新皮肤</a>
+            <div class="more-skin">
+              <ul>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/list1.png" ) }}" alt="" >
+                  <a href="#">我们的冠军皮肤</a>
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(19).jpg" ) }}" alt="" >
+                  <a href="#">我们的冠军皮肤</a>
+                </li>
+                <li>
+                	<img src="{{ url_for( "static", filename="image/index_image/258(3).jpg" ) }}" alt="" >
+                  <a href="#">我们的冠军皮肤</a>
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/list1.png" ) }}" alt="" >
+                  <a href="#">我们的冠军皮肤</a>
+                </li>
+                <li>
+                   <img src="{{ url_for( "static", filename="image/index_image/0(19).jpg" ) }}" alt="" >
+                  <a href="#">我们的冠军皮肤</a>
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(19).jpg" ) }}" alt="" >
+                  <a href="#">我们的冠军皮肤</a>
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(19).jpg" ) }}" alt="" >
+                  <a href="#">我们的冠军皮肤</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 新皮肤版本完成 -->
+        </div>
+        <div class="m-act-bottom-right">
+          <!-- 新版本 -->
+          <div class="new-vision">
+          	<img src="{{ url_for( "static", filename="image/index_image/version.png" ) }}" alt="" >
+          </div>
+          <!-- 新创作 -->
+          <div class="club-develop">
+          	<img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
+            <a href="#" title="小恶魔 崔丝塔娜：原画&炫彩皮肤">
+              <em></em>
+              <p class="p1">小恶魔 崔丝塔娜：原画&炫彩皮肤</p>
+              <p class="p2">本期是小恶魔 崔丝塔娜的倒数第二次更新，今天我们要分享她炫彩皮肤的进展以及原画创作的过程</p>
+            </a>
+          </div>
+          <!-- 新手办 -->
+          <div class="new-model">
+          	<img src="{{ url_for( "static", filename="image/index_image/0(2).jpg" ) }}" alt="" >
+          </div>
+          <!-- 周免 -->
+          <div class="week-free">
+            <a href="#">
+              <em class="icon-left"></em>
+              周免
+              <i></i>
+              <em class="icon-right"></em>
+            </a>
+            <!-- 周免英雄图片 -->
+            <div class="free-pic">
+              <em></em>
+              <ul>
+                <li>
+                  <a href="#">
+                  	<img src="{{ url_for( "static", filename="image/index_image/free1.png" ) }}" alt="" >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="{{ url_for( "static", filename="image/index_image/free2.png" ) }}" alt="" >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="{{ url_for( "static", filename="image/index_image/free3.png" ) }}" alt="" >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="{{ url_for( "static", filename="image/index_image/free4.png" ) }}" alt="" >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="{{ url_for( "static", filename="image/index_image/free5.png" ) }}" alt="" >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="{{ url_for( "static", filename="image/index_image/free6.png" ) }}" alt="" >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="{{ url_for( "static", filename="image/index_image/free7.png" ) }}" alt="" >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="{{ url_for( "static", filename="image/index_image/free8.png" ) }}" alt="" >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="{{ url_for( "static", filename="image/index_image/free9.png" ) }}" alt="" >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="{{ url_for( "static", filename="image/index_image/free10.png" ) }}" alt="" >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="{{ url_for( "static", filename="image/index_image/free11.png" ) }}" alt="" >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="{{ url_for( "static", filename="image/index_image/free12.png" ) }}" alt="" >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="{{ url_for( "static", filename="image/index_image/free13.png" ) }}" alt="" >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="{{ url_for( "static", filename="image/index_image/free14.png" ) }}" alt="" >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+    <!--part-1完成 -->
+  </div>
+  
+
+  <!-- 最新视频模块 -->
+	<div class="m-video floor">
+    <div class="part2-video">
+    	<div class="m-video-left">
+        <div class="m-video-title">
+          <h2>最新视频</h2>
+          <ul>
+            <li class="selected">推荐</li>
+            <li>官方</li>
+            <li>娱乐</li>
+            <li>赛事</li>
+            <li>教学</li>
+          </ul>
+          <a href="#">
+            更多<i></i>
+          </a>
+        </div>
+        <div>
+        <ul class="video-time db">
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(9).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(13).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(14).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(10).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(12).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(23).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(16).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(26).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+        </ul>
+        <ul class="video-time dn">
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(13).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(9).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+             <img src="{{ url_for( "static", filename="image/index_image/0(10).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(14).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(16).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(12).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(26).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(16).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+        </ul>
+        <ul class="video-time dn">
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(10).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(16).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(26).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(9).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(10).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(14).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(10).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(12).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+        </ul>
+        <ul class="video-time dn">
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(18).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(26).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(14).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(9).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{{ url_for( "static", filename="image/index_image/0(16).jpg" ) }}" alt="" >
+              <span>
+                <em></em>
+                <u></u>
+              </span>
+            </a>
+            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
+            <a href="#">1.9万次播放</a>
+            <a href="#">2019-05-22</a>
+          </li>
+        </ul>
+        </div>
+      </div>
+
+      <!--  热门专辑  -->
+      <div class="m-video-right">
+          <div class="m-video-title">
+            <h2>热门专辑</h2>
+            <ul class="video-day">
+              <li class="selected">周一</li>
+              <li>周二</li>
+              <li>周三</li>
+              <li>周四</li>
+              <li>周五</li>
+              <li>周六</li>
+              <li>周日</li>
+            </ul>
+          </div>
+          <div class="hotprogram">
+            <div class="hotprogram-content">
+            <div class="hotcontent">
+              <ul class="db">
+                <li>
+                	<img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
+                  <h4>撸神别搞事儿</h4>
+                  <p>2019-05-04更新</p>
+                  <a href="#" class="name-hotprogram">
+                      大神翻车，高玩跳水，路人表演，青铜绝活，
+                  </a>
+                  <a href="#" class="author-hotprogram">
+                    <img src="{{ url_for( "static", filename="image/index_image/0(20).jpg" ) }}" alt="" >
+                    电竞动物园</a>
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(1).jpg" ) }}" alt="" >
+                  <h4>魔王一周秀</h4>
+                  <p>2019-05-07更新</p>
+                  <a href="#" class="name-hotprogram">
+                      每周带你来看大魔王faker极限操作时刻！
+                  </a>
+                  <a href="#" class="author-hotprogram">
+                    <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
+                    电竞动物园</a>
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(7).jpg" ) }}" alt="" >
+                  <h4>小鱼Top5</h4>
+                  <p>2019-05-03更新</p>
+                  <a href="#" class="name-hotprogram">
+                      汇集英雄联盟最顶级精彩操作视频。
+                  </a>
+                  <a href="#" class="author-hotprogram">
+                    <img src="{{ url_for( "static", filename="image/index_image/0(28).jpg" ) }}" alt="" >
+                    电竞动物园</a>  
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
+                  <h4>撸神别搞事儿</h4>
+                  <p>2019-05-04更新</p>
+                  <a href="#" class="name-hotprogram">
+                      大神翻车，高玩跳水，路人表演，青铜绝活，
+                  </a>
+                  <a href="#" class="author-hotprogram">
+                    <img src="{{ url_for( "static", filename="image/index_image/0(20).jpg" ) }}" alt="" >
+                    电竞动物园</a>
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(1).jpg" ) }}" alt="" >
+                  <h4>魔王一周秀</h4>
+                  <p>2019-05-07更新</p>
+                  <a href="#" class="name-hotprogram">
+                      每周带你来看大魔王faker极限操作时刻！
+                  </a>
+                  <a href="#" class="author-hotprogram">
+                    <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
+                    电竞动物园</a>
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(7).jpg" ) }}" alt="" >
+                  <h4>小鱼Top5</h4>
+                  <p>2019-05-03更新</p>
+                  <a href="#" class="name-hotprogram">
+                      汇集英雄联盟最顶级精彩操作视频。
+                  </a>
+                  <a href="#" class="author-hotprogram">
+                    <img src="{{ url_for( "static", filename="image/index_image/0(28).jpg" ) }}" alt="" >
+                    电竞动物园</a>  
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
+                  <h4>撸神别搞事儿</h4>
+                  <p>2019-05-04更新</p>
+                  <a href="#" class="name-hotprogram">
+                      大神翻车，高玩跳水，路人表演，青铜绝活，
+                  </a>
+                  <a href="#" class="author-hotprogram">
+                    <img src="{{ url_for( "static", filename="image/index_image/0(20).jpg" ) }}" alt="" >
+                    电竞动物园</a>
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(1).jpg" ) }}" alt="" >
+                  <h4>魔王一周秀</h4>
+                  <p>2019-05-07更新</p>
+                  <a href="#" class="name-hotprogram">
+                      每周带你来看大魔王faker极限操作时刻！
+                  </a>
+                  <a href="#" class="author-hotprogram">
+                    <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
+                    电竞动物园</a>
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(14).jpg" ) }}" alt="" >
+                  <h4>小鱼Top5</h4>
+                  <p>2019-05-03更新</p>
+                  <a href="#" class="name-hotprogram">
+                      汇集英雄联盟最顶级精彩操作视频。
+                  </a>
+                  <a href="#" class="author-hotprogram">
+                    <img src<img src="{{ url_for( "static", filename="image/index_image/0(28).jpg" ) }}" alt="" >
+                    电竞动物园</a>  
+                </li>
+              </ul>
+              <ul class="dn">
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(6).jpg" ) }}" alt="" >
+                  <h4>撸神别搞事儿</h4>
+                  <p>2019-05-04更新</p>
+                  <a href="#" class="name-hotprogram">
+                      大神翻车，高玩跳水，路人表演，青铜绝活，
+                  </a>
+                  <a href="#" class="author-hotprogram">
+                    <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
+                    电竞动物园</a>
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(7).jpg" ) }}" alt="" >
+                  <h4>魔王一周秀</h4>
+                  <p>2019-05-07更新</p>
+                  <a href="#" class="name-hotprogram">
+                      每周带你来看大魔王faker极限操作时刻！
+                  </a>
+                  <a href="#" class="author-hotprogram">
+                    <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
+                    电竞动物园</a>
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(7).jpg" ) }}" alt="" >
+                  <h4>小鱼Top5</h4>
+                  <p>2019-05-03更新</p>
+                  <a href="#" class="name-hotprogram">
+                      汇集英雄联盟最顶级精彩操作视频。
+                  </a>
+                  <a href="#" class="author-hotprogram">
+                    <img src="{{ url_for( "static", filename="image/index_image/0(28).jpg" ) }}" alt="" >
+                    电竞动物园</a>  
+                </li>
+                <li>
+                  <img src="{{ url_for( "static", filename="image/index_image/0(5).jpg" ) }}" alt="" >
+                  <h4>撸神别搞事儿</h4>
+                  <p>2019-05-04更新</p>
+                  <a href="#" class="name-hotprogram">
+                      大神翻车，高玩跳水，路人表演，青铜绝活，
+                  </a>
+                  <a href="#" class="author-hotprogram">
+                    <img src="{{ url_for( "static", filename="image/index_image/0(20).jpg" ) }}" alt="" >
+                    电竞动物园</a>
+                </li>
+              </ul>
+            </div>
+              <a  class="hotprogram-left"></a>
+              <a  class="hotprogram-right"></a>
+            </div>
+            <a href="#" class="more-hotprogram">
+              前往视频中心
+              <i></i>
+            </a>
+          </div>
+      </div>
+    </div>
+  </div>
+	<!-- body end-->
+</body>
+</html>
