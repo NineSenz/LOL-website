@@ -9,7 +9,6 @@
     <link href="{{ url_for( "static", filename="css/header.css" ) }}" rel="stylesheet" />
     <link href="{{ url_for( "static", filename="css/index.css" ) }}" rel="stylesheet" />
     <script src="{{ url_for( "static", filename="js/jquery.js" ) }}"></script>
-    <script src="{{ url_for( "static", filename="js/footer.js" ) }}"></script>
     <script src="{{ url_for( "static", filename="js/index.js" ) }}"></script>
 </head>
 <body>
@@ -177,21 +176,11 @@
 		<div class="tab-carousel">
 			<div class="carousel">
 		        <ul>
+                {% for x in items.banner.banner %}
 		          <li>
-		          	<img src="{{ url_for( "static", filename="image/index_image/banner1.jpg" ) }}" >
+		          	<img src="{{ url_for( "static", filename= x.imgUrl ) }}" >
 		          </li>
-		          <li>
-		            <img src="{{ url_for( "static", filename="image/index_image/banner2.jpg" ) }}" >
-		          </li>
-		          <li>
-		            <img src="{{ url_for( "static", filename="image/index_image/banner3.jpg" ) }}" >
-		          </li>
-		          <li>
-		            <img src="{{ url_for( "static", filename="image/index_image/banner4.jpg" ) }}" >
-		          </li>
-		          <li>
-		            <img src="{{ url_for( "static", filename="image/index_image/banner5.jpg" ) }}" >
-		          </li>
+                {% endfor %}
 		        </ul>
 		        <div class="carousel-list" id="carousel-lists">
 		          <span class="selected">全场半价</span>
@@ -207,11 +196,11 @@
 		    <div class="tab">
         <div class="tab-top">
           <ul>
-            <li class="selected">综合</li>
-            <li>广告</li>
+            <li class="selected">公告</li>
             <li>赛事</li>
             <li>攻略</li>
             <li>社区</li>
+            <li>活动</li>
           </ul>
         </div>
       <!-- 上部分 -->
@@ -222,48 +211,17 @@
                 “520甜蜜周末”全场半价延长公告
               </a>
             </li>
-            <li>
-              <span class="item-type">赛事</span>
-              <a class="item-href" href="#">
-                2019LPL夏季赛赛程公布
-              </a>
-              <span class="item-time">05-25</span>
-            </li>
+
+          {% for x in items.notice.notice %}
             <li>
               <span class="item-type">公告</span>
               <a class="item-href" href="#">
-                全场半价客户端商城入口恢复公告
+                {{ x.title }}
               </a>
-              <span class="item-time">05-24</span>
+              <span class="item-time">{{ x.datetime }}</span>
             </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                “520甜蜜周末”全场半价即将开启
-              </a>
-              <span class="item-time">05-20</span>
-            </li>
-            <li>
-              <span class="item-type">赛事</span>
-              <a class="item-href" href="#">
-                5月27日LPL夏季赛售票开启
-              </a>
-              <span class="item-time">05-25</span>
-            </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                峡谷之巅第四赛季即将结束
-              </a>
-              <span class="item-time">05-24</span>
-            </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                关于测试服孙悟空的技能改动详解
-              </a>
-              <span class="item-time">05-23</span>
-            </li>
+          {% endfor %}
+
           </ul>
           <ul class="dn">
             <li>
@@ -271,97 +229,36 @@
                   峡谷之巅第四赛季奖励公告
               </a>
             </li>
-            <li>
-              <span class="item-type">赛事</span>
-              <a class="item-href" href="#">
-                2019LPL夏季赛赛程公布
-              </a>
-              <span class="item-time">05-25</span>
-            </li>
+
+          {% for x in items.competition.competition %}
             <li>
               <span class="item-type">公告</span>
               <a class="item-href" href="#">
-                全场半价客户端商城入口恢复公告
+                {{ x.title }}
               </a>
-              <span class="item-time">05-24</span>
+              <span class="item-time">{{ x.datetime }}</span>
             </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                “520甜蜜周末”全场半价即将开启
-              </a>
-              <span class="item-time">05-20</span>
-            </li>
-            <li>
-              <span class="item-type">赛事</span>
-              <a class="item-href" href="#">
-                5月27日LPL夏季赛售票开启
-              </a>
-              <span class="item-time">05-25</span>
-            </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                峡谷之巅第四赛季即将结束
-              </a>
-              <span class="item-time">05-24</span>
-            </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                关于测试服孙悟空的技能改动详解
-              </a>
-              <span class="item-time">05-23</span>
-            </li>
+          {% endfor %}
+
           </ul>
           <ul class="dn">
             <li>
               <a href="#">
-                  英雄战棋模式将于暑期上线
+                  【小海】中韩服第一锤石，教你学会锤石细节
               </a>
             </li>
+
+          {% for x in items.competition.competition %}
             <li>
-              <span class="item-type">赛事</span>
+              <span class="item-type">攻略</span>
               <a class="item-href" href="#">
-                  DMO能否终结连败 OMG渴望复仇LGD
+                {{ x.title }}
               </a>
-              <span class="item-time">05-25</span>
+              <span class="item-time">{{ x.datetime }}</span>
             </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                全场半价客户端商城入口恢复公告
-              </a>
-              <span class="item-time">05-24</span>
-            </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                “520甜蜜周末”全场半价即将开启
-              </a>
-              <span class="item-time">05-20</span>
-            </li>
-            <li>
-              <span class="item-type">赛事</span>
-              <a class="item-href" href="#">
-                5月27日LPL夏季赛售票开启
-              </a>
-              <span class="item-time">05-25</span>
-            </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                峡谷之巅第四赛季即将结束
-              </a>
-              <span class="item-time">05-24</span>
-            </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                关于测试服孙悟空的技能改动详解
-              </a>
-              <span class="item-time">05-23</span>
-            </li>
+          {% endfor %}
+
+
           </ul>
           <ul class="dn">
             <li>
@@ -369,48 +266,17 @@
                   莫德凯撒重做即达巅峰 双重玩法统治上中两路
               </a>
             </li>
+
+          {% for x in items.competition.competition %}
             <li>
-              <span class="item-type">赛事</span>
+              <span class="item-type">社区</span>
               <a class="item-href" href="#">
-                2019LPL夏季赛赛程公布
+                {{ x.title }}
               </a>
-              <span class="item-time">05-25</span>
+              <span class="item-time">{{ x.datetime }}</span>
             </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                全场半价客户端商城入口恢复公告
-              </a>
-              <span class="item-time">05-24</span>
-            </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                “520甜蜜周末”全场半价即将开启
-              </a>
-              <span class="item-time">05-20</span>
-            </li>
-            <li>
-              <span class="item-type">赛事</span>
-              <a class="item-href" href="#">
-                5月27日LPL夏季赛售票开启
-              </a>
-              <span class="item-time">05-25</span>
-            </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                峡谷之巅第四赛季即将结束
-              </a>
-              <span class="item-time">05-24</span>
-            </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                关于测试服孙悟空的技能改动详解
-              </a>
-              <span class="item-time">05-23</span>
-            </li>
+          {% endfor %}
+
           </ul>
           <ul class="dn">
             <li>
@@ -418,48 +284,17 @@
                 狼王发威塔下一秀二 群恐撕咬极限反杀
               </a>
             </li>
+
+          {% for x in items.competition.competition %}
             <li>
-              <span class="item-type">赛事</span>
+              <span class="item-type">活动</span>
               <a class="item-href" href="#">
-                  电竞小说《我的时代》224章：司马仪送钩
+                {{ x.title }}
               </a>
-              <span class="item-time">05-25</span>
+              <span class="item-time">{{ x.datetime }}</span>
             </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                全场半价客户端商城入口恢复公告
-              </a>
-              <span class="item-time">05-24</span>
-            </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                “520甜蜜周末”全场半价即将开启
-              </a>
-              <span class="item-time">05-20</span>
-            </li>
-            <li>
-              <span class="item-type">赛事</span>
-              <a class="item-href" href="#">
-                5月27日LPL夏季赛售票开启
-              </a>
-              <span class="item-time">05-25</span>
-            </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                峡谷之巅第四赛季即将结束
-              </a>
-              <span class="item-time">05-24</span>
-            </li>
-            <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                关于测试服孙悟空的技能改动详解
-              </a>
-              <span class="item-time">05-23</span>
-            </li>
+          {% endfor %}
+
           </ul>
           <a class="tab-bottom" href="#">
             <span>阅读最多</span>
@@ -478,139 +313,29 @@
         <div class="m-act-top-left">
           <div class="m-act-title">
             <h2>热门活动</h2>
-            <ul>
-              <li class="selected">正在进行</li>
-              <li>商城活动</li>
-              <li>长期活动</li>
-            </ul>
             <a href="#">
-              更多<i></i>
             </a>
           </div>
           <div class="m-act-list">
             <ul class="db">
+
+            {% for x in items.activity.activity %}
               <li>
                 <a href="#">
-                	<img src="{{ url_for( "static", filename="image/index_image/actlist1.jpg" ) }}" alt="" title="LPL夏季赛售票开启" >
+                	<img src="{{ url_for( "static", filename= x.imgurl ) }}" alt="" title={{ x.title[0] }} >
                 </a>
-                <p class="titlelist">LPL春季赛售票开启</p>
-                <a href="#" class="timing">82天后结束</a>
+                <p class="titlelist">{{ x.title[0] }}</p>
+                <a href="#" class="timing">{{ x.title[1] }}</a>
                 <em></em>
                 <div class="mask">
                   <div class="mask-news">
-                    <h3>季中英雄大礼</h3>
-                    <p>试炼2019为荣誉而战</p>
-                    <p>2019-05-04 - 2019-09-01</p>
+                    <h3>{{ x.body[0] }}</h3>
+                    <p>{{ x.body[1] }}</p>
+                    <p>{{ x.body[2] }}</p>
                   </div>
                 </div>
               </li>
-              <li>
-                <a href="#">
-                  <img src="{{ url_for( "static", filename="image/index_image/actlist2.jpg" ) }}" alt="" title="LPL夏季赛售票开启" >
-                </a>
-                <p class="titlelist">LPL春季赛开启</p>
-                <a href="#" class="timing">82天后结束</a>
-                <em></em>
-                <div class="mask">
-                  <div class="mask-news">
-                    <h3>季中英雄大礼</h3>
-                    <p>试炼2019为荣誉而战</p>
-                    <p>2019-05-04 - 2019-09-01</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="{{ url_for( "static", filename="image/index_image/actlist3.jpg" ) }}" alt="" title="MSI训练" >
-                </a>
-                <p class="titlelist">MSI训练</p>
-                <a href="#" class="timing">82天后结束</a>
-                <em></em>
-                <div class="mask">
-                  <div class="mask-news">
-                    <h3>季中英雄大礼</h3>
-                    <p>试炼2019为荣誉而战</p>
-                    <p>2019-05-04 - 2019-09-01</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="{{ url_for( "static", filename="image/index_image/actlist4.jpg" ) }}" alt="" title="季度训练" >
-                </a>
-                <p class="titlelist">季度训练</p>
-                <a href="#" class="timing">82天后结束</a>
-                <em></em>
-                <div class="mask">
-                  <div class="mask-news">
-                    <h3>季中英雄大礼</h3>
-                    <p>试炼2019为荣誉而战</p>
-                    <p>2019-05-04 - 2019-09-01</p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-            <ul class="dn">
-              <li>
-                <a href="#">
-                  <img src="{{ url_for( "static", filename="image/index_image/actlist1.jpg" ) }}" alt="" title="LPL夏季赛售票开启" >
-                </a>
-                <p class="titlelist">LPL春季赛售票开启</p>
-                <a href="#" class="timing">82天后结束</a>
-                <em></em>
-                <div class="mask">
-                  <div class="mask-news">
-                    <h3>季中英雄大礼</h3>
-                    <p>试炼2019为荣誉而战</p>
-                    <p>2019-05-04 - 2019-09-01</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="{{ url_for( "static", filename="image/index_image/actlist2.jpg" ) }}" alt="" title="LPL夏季赛售票开启" >
-                </a>
-                <p class="titlelist">LPL春季赛开启</p>
-                <a href="#" class="timing">82天后结束</a>
-                <em></em>
-                <div class="mask">
-                  <div class="mask-news">
-                    <h3>季中英雄大礼</h3>
-                    <p>试炼2019为荣誉而战</p>
-                    <p>2019-05-04 - 2019-09-01</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="{{ url_for( "static", filename="image/index_image/actlist4.jpg" ) }}" alt="" title="LPL夏季赛售票开启" >
-                </a>
-                <p class="titlelist">MSI训练</p>
-                <a href="#" class="timing">82天后结束</a>
-                <em></em>
-                <div class="mask">
-                  <div class="mask-news">
-                    <h3>季中英雄大礼</h3>
-                    <p>试炼2019为荣誉而战</p>
-                    <p>2019-05-04 - 2019-09-01</p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="{{ url_for( "static", filename="image/index_image/actlist2.jpg" ) }}" alt="" title="季度训练" >
-                </a>
-                <p class="titlelist">季度训练</p>
-                <a href="#" class="timing">82天后结束</a>
-                <em></em>
-                <div class="mask">
-                  <div class="mask-news">
-                    <h3>季中英雄大礼</h3>
-                    <p>试炼2019为荣誉而战</p>
-                    <p>2019-05-04 - 2019-09-01</p>
-                  </div>
-                </div>
-              </li>
+            {% endfor %}
             </ul>
           </div>
         </div>
@@ -626,22 +351,17 @@
             <li class="p2 flashmen">
               <a href="#">领取中心</a>
             </li>
+          {% for x in items.link.link %}
             <li class="p3">
               <em></em>
-              <a href="#">在线客服</a>
+              <a href="#">{{ x.title }}</a>
             </li>
-            <li class="p3">
-              <em></em>
-              <a href="#">秩序殿堂</a>
-            </li>
-            <li class="p3">
-              <em></em>
-              <a href="#">游戏资料</a>
-            </li>
+          {% endfor %}
             <li class="p4">
               <em></em>
               <a href="#">峡谷之巅</a>
             </li>
+
             <li class="p3">
               <em class="icon"></em>
               <a href="#">微信绑定</a>

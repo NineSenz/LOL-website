@@ -1,0 +1,19 @@
+{
+  "link": [
+    {
+      "id": 1,
+      "link": "/download",
+      "title": "在线客服"
+    },
+    {
+      "id": 1,
+      "link": "/download",
+      "title": "秩序殿堂"
+    },
+    {
+      "id": 1,
+      "link": "/download",
+      "title": "游戏资料"
+    }
+  ]
+}

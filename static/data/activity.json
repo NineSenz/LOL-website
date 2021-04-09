@@ -1,0 +1,28 @@
+{
+  "activity": [
+    {
+      "id":1,
+      "imgurl": "image/index_image/actlist1.jpg",
+      "title": ["LPL春季赛售票开启","83天后结束"],
+      "body": ["季中英雄大礼","试炼2019为荣誉而战","2019-05-04 - 2019-09-01"]
+    },
+    {
+      "id":2,
+      "imgurl": "image/index_image/actlist2.jpg",
+      "title": ["试炼法球限时销售","83天后结束"],
+      "body": ["试炼法球限时销售","试炼2019为荣誉而战","2019-05-04 - 2019-09-01"]
+    },
+    {
+      "id":3,
+      "imgurl": "image/index_image/actlist3.jpg",
+      "title": ["iG大礼包限时售卖","83天后结束"],
+      "body": ["iG大礼包限时售卖","试炼2019为荣誉而战","2019-05-04 - 2019-09-01"]
+    },
+    {
+      "id":4,
+      "imgurl": "image/index_image/actlist4.jpg",
+      "title": ["集MSI明星选手卡","83天后结束"],
+      "body": ["集MSI明星选手卡","试炼2019为荣誉而战","2019-05-04 - 2019-09-01"]
+    }
+  ]
+}
