@@ -477,76 +477,15 @@
             <div class="free-pic">
               <em></em>
               <ul>
+
+                  {% for x in items.newhero.newhero %}
                 <li>
                   <a href="#">
-                  	<img src="{{ url_for( "static", filename="image/index_image/free1.png" ) }}" alt="" >
+                  	<img src="{{ url_for( "static", filename= x.imgurl ) }}" alt="" >
                   </a>
                 </li>
-                <li>
-                  <a href="#">
-                    <img src="{{ url_for( "static", filename="image/index_image/free2.png" ) }}" alt="" >
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="{{ url_for( "static", filename="image/index_image/free3.png" ) }}" alt="" >
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="{{ url_for( "static", filename="image/index_image/free4.png" ) }}" alt="" >
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="{{ url_for( "static", filename="image/index_image/free5.png" ) }}" alt="" >
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="{{ url_for( "static", filename="image/index_image/free6.png" ) }}" alt="" >
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="{{ url_for( "static", filename="image/index_image/free7.png" ) }}" alt="" >
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="{{ url_for( "static", filename="image/index_image/free8.png" ) }}" alt="" >
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="{{ url_for( "static", filename="image/index_image/free9.png" ) }}" alt="" >
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="{{ url_for( "static", filename="image/index_image/free10.png" ) }}" alt="" >
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="{{ url_for( "static", filename="image/index_image/free11.png" ) }}" alt="" >
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="{{ url_for( "static", filename="image/index_image/free12.png" ) }}" alt="" >
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="{{ url_for( "static", filename="image/index_image/free13.png" ) }}" alt="" >
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img src="{{ url_for( "static", filename="image/index_image/free14.png" ) }}" alt="" >
-                  </a>
-                </li>
+                  {% endfor %}
+
               </ul>
             </div>
           </div>

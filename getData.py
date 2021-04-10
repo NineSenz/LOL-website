@@ -41,3 +41,9 @@ def newskin():
     with open(filename, encoding='utf-8') as f:
         newskin = json.load(f);
     return newskin;
+
+def newhero():
+    filename = os.path.join(app.static_folder, 'data/newhero.json')
+    with open(filename, encoding='utf-8') as f:
+        newhero = json.load(f);
+    return newhero;
