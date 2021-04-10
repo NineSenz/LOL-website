@@ -433,33 +433,14 @@
             <a href="#" class="newhero">新皮肤</a>
             <div class="more-skin">
               <ul>
+
+                  {% for x in items.newskin.newskin %}
                 <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/list1.png" ) }}" alt="" >
-                  <a href="#">我们的冠军皮肤</a>
+                  <img src="{{ url_for( "static", filename=x.imgurl ) }}" alt="" >
+                  <a href="#">{{ x.title }}</a>
                 </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(19).jpg" ) }}" alt="" >
-                  <a href="#">我们的冠军皮肤</a>
-                </li>
-                <li>
-                	<img src="{{ url_for( "static", filename="image/index_image/258(3).jpg" ) }}" alt="" >
-                  <a href="#">我们的冠军皮肤</a>
-                </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/list1.png" ) }}" alt="" >
-                  <a href="#">我们的冠军皮肤</a>
-                </li>
-                <li>
-                   <img src="{{ url_for( "static", filename="image/index_image/0(19).jpg" ) }}" alt="" >
-                  <a href="#">我们的冠军皮肤</a>
-                </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(19).jpg" ) }}" alt="" >
-                  <a href="#">我们的冠军皮肤</a>
-                </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(19).jpg" ) }}" alt="" >
-                  <a href="#">我们的冠军皮肤</a>
+                  {% endfor %}
+
                 </li>
               </ul>
             </div>

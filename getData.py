@@ -35,3 +35,9 @@ def link():
     with open(filename, encoding="utf-8") as f:
         link = json.load(f);
     return link;
+
+def newskin():
+    filename = os.path.join(app.static_folder, 'data/newskin.json')
+    with open(filename, encoding='utf-8') as f:
+        newskin = json.load(f);
+    return newskin;

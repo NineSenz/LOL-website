@@ -39,12 +39,14 @@ def hello_world():
     notice = getData.notice()
     activity = getData.activity()
     link = getData.link()
+    newskin = getData.newskin()
     item={
         "banner": banner,
         "competition": competition,
         "notice": notice,
         "activity": activity,
-        "link": link
+        "link": link,
+        "newskin":newskin
     }
     return render_template('index.html', items=item)
 
