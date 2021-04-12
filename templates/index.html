@@ -607,151 +607,39 @@
             <div class="hotprogram-content">
             <div class="hotcontent">
               <ul class="db">
+
+                  {% for x in items.issue.issue %}
                 <li>
-                	<img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
-                  <h4>撸神别搞事儿</h4>
-                  <p>2019-05-04更新</p>
+                	<img src="{{ url_for( "static", filename= x.name_img ) }}" alt="" >
+                  <h4>{{ x.title }}</h4>
+                  <p>{{ x.datetime }}</p>
                   <a href="#" class="name-hotprogram">
-                      大神翻车，高玩跳水，路人表演，青铜绝活，
+                      {{ x.content }}
                   </a>
                   <a href="#" class="author-hotprogram">
-                    <img src="{{ url_for( "static", filename="image/index_image/0(20).jpg" ) }}" alt="" >
-                    电竞动物园</a>
-                </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(1).jpg" ) }}" alt="" >
-                  <h4>魔王一周秀</h4>
-                  <p>2019-05-07更新</p>
-                  <a href="#" class="name-hotprogram">
-                      每周带你来看大魔王faker极限操作时刻！
+                    <img src="{{ url_for( "static", filename= x.author_img ) }}" alt="" >
+                    {{ x.username }}
                   </a>
-                  <a href="#" class="author-hotprogram">
-                    <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
-                    电竞动物园</a>
                 </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(7).jpg" ) }}" alt="" >
-                  <h4>小鱼Top5</h4>
-                  <p>2019-05-03更新</p>
-                  <a href="#" class="name-hotprogram">
-                      汇集英雄联盟最顶级精彩操作视频。
-                  </a>
-                  <a href="#" class="author-hotprogram">
-                    <img src="{{ url_for( "static", filename="image/index_image/0(28).jpg" ) }}" alt="" >
-                    电竞动物园</a>  
-                </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
-                  <h4>撸神别搞事儿</h4>
-                  <p>2019-05-04更新</p>
-                  <a href="#" class="name-hotprogram">
-                      大神翻车，高玩跳水，路人表演，青铜绝活，
-                  </a>
-                  <a href="#" class="author-hotprogram">
-                    <img src="{{ url_for( "static", filename="image/index_image/0(20).jpg" ) }}" alt="" >
-                    电竞动物园</a>
-                </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(1).jpg" ) }}" alt="" >
-                  <h4>魔王一周秀</h4>
-                  <p>2019-05-07更新</p>
-                  <a href="#" class="name-hotprogram">
-                      每周带你来看大魔王faker极限操作时刻！
-                  </a>
-                  <a href="#" class="author-hotprogram">
-                    <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
-                    电竞动物园</a>
-                </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(7).jpg" ) }}" alt="" >
-                  <h4>小鱼Top5</h4>
-                  <p>2019-05-03更新</p>
-                  <a href="#" class="name-hotprogram">
-                      汇集英雄联盟最顶级精彩操作视频。
-                  </a>
-                  <a href="#" class="author-hotprogram">
-                    <img src="{{ url_for( "static", filename="image/index_image/0(28).jpg" ) }}" alt="" >
-                    电竞动物园</a>  
-                </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
-                  <h4>撸神别搞事儿</h4>
-                  <p>2019-05-04更新</p>
-                  <a href="#" class="name-hotprogram">
-                      大神翻车，高玩跳水，路人表演，青铜绝活，
-                  </a>
-                  <a href="#" class="author-hotprogram">
-                    <img src="{{ url_for( "static", filename="image/index_image/0(20).jpg" ) }}" alt="" >
-                    电竞动物园</a>
-                </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(1).jpg" ) }}" alt="" >
-                  <h4>魔王一周秀</h4>
-                  <p>2019-05-07更新</p>
-                  <a href="#" class="name-hotprogram">
-                      每周带你来看大魔王faker极限操作时刻！
-                  </a>
-                  <a href="#" class="author-hotprogram">
-                    <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
-                    电竞动物园</a>
-                </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(14).jpg" ) }}" alt="" >
-                  <h4>小鱼Top5</h4>
-                  <p>2019-05-03更新</p>
-                  <a href="#" class="name-hotprogram">
-                      汇集英雄联盟最顶级精彩操作视频。
-                  </a>
-                  <a href="#" class="author-hotprogram">
-                    <img src<img src="{{ url_for( "static", filename="image/index_image/0(28).jpg" ) }}" alt="" >
-                    电竞动物园</a>  
-                </li>
+                  {% endfor %}
+
               </ul>
               <ul class="dn">
+                {% for x in items.issue.issue %}
                 <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(6).jpg" ) }}" alt="" >
-                  <h4>撸神别搞事儿</h4>
-                  <p>2019-05-04更新</p>
+                	<img src="{{ url_for( "static", filename= x.name_img ) }}" alt="" >
+                  <h4>{{ x.title }}</h4>
+                  <p>{{ x.datetime }}</p>
                   <a href="#" class="name-hotprogram">
-                      大神翻车，高玩跳水，路人表演，青铜绝活，
+                      {{ x.content }}
                   </a>
                   <a href="#" class="author-hotprogram">
-                    <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
-                    电竞动物园</a>
-                </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(7).jpg" ) }}" alt="" >
-                  <h4>魔王一周秀</h4>
-                  <p>2019-05-07更新</p>
-                  <a href="#" class="name-hotprogram">
-                      每周带你来看大魔王faker极限操作时刻！
+                    <img src="{{ url_for( "static", filename= x.author_img ) }}" alt="" >
+                    {{ x.username }}
                   </a>
-                  <a href="#" class="author-hotprogram">
-                    <img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
-                    电竞动物园</a>
                 </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(7).jpg" ) }}" alt="" >
-                  <h4>小鱼Top5</h4>
-                  <p>2019-05-03更新</p>
-                  <a href="#" class="name-hotprogram">
-                      汇集英雄联盟最顶级精彩操作视频。
-                  </a>
-                  <a href="#" class="author-hotprogram">
-                    <img src="{{ url_for( "static", filename="image/index_image/0(28).jpg" ) }}" alt="" >
-                    电竞动物园</a>  
-                </li>
-                <li>
-                  <img src="{{ url_for( "static", filename="image/index_image/0(5).jpg" ) }}" alt="" >
-                  <h4>撸神别搞事儿</h4>
-                  <p>2019-05-04更新</p>
-                  <a href="#" class="name-hotprogram">
-                      大神翻车，高玩跳水，路人表演，青铜绝活，
-                  </a>
-                  <a href="#" class="author-hotprogram">
-                    <img src="{{ url_for( "static", filename="image/index_image/0(20).jpg" ) }}" alt="" >
-                    电竞动物园</a>
-                </li>
+                {% endfor %}
+
               </ul>
             </div>
               <a  class="hotprogram-left"></a>
