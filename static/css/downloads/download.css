@@ -1,0 +1,521 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    overflow-anchor: none;
+    background-color: #eee;
+    font: 12px/1.5 tahoma, '\5FAE\8F6F\96C5\9ED1', sans-serif;
+}
+
+a {
+    text-decoration: none
+}
+
+.top-act-link {
+    background-image: url(../../image/download_image/topfoot-spr.png);
+    background-size: 405px 178px;
+    background-repeat: no-repeat
+}
+
+.act-link {
+    background-position: -216px -39px;
+    width: 160px;
+    height: 40px
+}
+
+.comm-icon-phone {
+    background-position: -303px -84px;
+    width: 16px;
+    height: 24px
+}
+
+.comm-head {
+    width: 100%;
+    height: 78px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.comm-head .logo {
+    float: left;
+    width: 132px;
+    height: 49px;
+    margin-top: 10px
+}
+
+.head-normal {
+    width: 100%;
+    max-width: 1358px;
+    height: 78px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 4
+}
+
+.head-nav {
+    float: left;
+    width: 55%;
+    height: 78px;
+    box-sizing: border-box;
+    margin-left: 30px;
+    padding-top: 16px
+}
+
+.head-nav>li {
+    float: left;
+    list-style: none;
+    width: 20%;
+    height: 78px;
+    text-align: center
+}
+
+.head-nav>li>a {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.head-nav-title {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px
+}
+
+.head-nav-subtitle {
+    display: block;
+    color: #aeaeae;
+    font-size: 11px;
+    margin-top: -1px;
+    letter-spacing: 1px
+}
+
+.head-user-normal {
+    float: right;
+    width: 244px;
+    height: 78px;
+    position: relative;
+    z-index: 3
+}
+
+.head-user-profile {
+    float: left;
+    width: 48px;
+    height: 48px;
+    position: relative;
+    margin-top: 14px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 0
+}
+
+.head-user-profile>img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 36px;
+    height: auto;
+    border-radius: 50%
+}
+
+.head-user-profile>span {
+    display: block;
+    background-position: -216px -117px;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.head-user-brief {
+    float: left;
+    margin-left: 10px
+}
+
+.head-user-brief>.login {
+    color: #fefefe;
+    font-size: 16px;
+    line-height: 78px
+}
+
+.head-user-brief>.login>a {
+    color: #fff3d0
+}
+
+.head-app-normal {
+    float: right;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin: 17px 31px 0 0
+}
+
+.head-app-normal>a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.comm-topact {
+    width: 100%;
+    min-width: 1230px;
+    height: 360px;
+    overflow: hidden;
+    position: relative;
+    background: center top no-repeat;
+}
+
+.comm-topact .dark-line {
+    width: 100%;
+    height: 131px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../../image/download_image/dark-jianbian-repeatx-0.png) repeat center top;
+    z-index: 1
+}
+
+.big-image {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 1920px;
+    height: 100%;
+    margin-left: -960px
+}
+
+.right-link {
+    width: auto;
+    max-width: 1358px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto
+}
+
+.top-act-link {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -77px;
+    bottom: 32px;
+    background-position: -216px -39px;
+    width: 160px;
+    height: 40px;
+    font-size: 0;
+    -webkit-transition: filter .5s;
+    transition: filter .5s;
+    filter: brightness(1);
+    -webkit-filter: brightness(1)
+}
+
+.top-act-link.left {
+    left: 0;
+    margin-left: 0
+}
+
+.top-act-link:hover {
+    filter: brightness(1.15);
+    -webkit-filter: brightness(1.15)
+}
+
+.top-version {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 28px;
+    font-size: 14px;
+    color: #888787
+}
+
+.top-version em {
+    color: #f5d185;
+    margin-right: 10px
+}
+
+.top-version-link {
+    display: inline-block;
+    padding: 0 15px;
+    height: 22px;
+    border: 2px solid #f5d185;
+    text-align: center;
+    line-height: 22px;
+    background: #000;
+    background: rgba(0, 0, 0, .65);
+    font-size: 12px;
+    color: #f5d185;
+}
+
+.g-wrap {
+    width: 1358px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.g-wrap:after {
+    content: '\20';
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both
+}
+
+.website-path {
+    width: 1358px;
+    height: 96px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 96px;
+    font-size: 14px
+}
+
+.website-path .icon-home {
+    display: inline-block;
+    vertical-align: middle;
+    margin: -3px 9px 0 0
+}
+
+.website-path .icon-arrow-2 {
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 21px 0 21px
+}
+
+.website-path a {
+    color: #a9a9a9
+}
+
+.website-path a:hover {
+    text-decoration: underline
+}
+
+.website-path .here {
+    color: #424242
+}
+
+.website-path .here:hover {
+    text-decoration: none
+}
+
+/* 下载图片的引入 */
+.pic {
+    background: url(../../image/download_image/sprdown.png) no-repeat;
+}
+
+.inforbox {
+    padding: 40px;
+    width: 800px;
+    float: left;
+    background: #fff;
+}
+
+.ofh {
+    overflow: hidden;
+}
+
+.title {
+    font-size: 16px;
+    color: #287D7C;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    background-position: -965px 0
+}
+
+.downinfo {
+    word-spacing: 5px;
+}
+
+.media {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+}
+
+.downlst {
+    padding-right: 8px;
+    margin: 10px 0 35px;
+}
+
+.downbtn {
+    display: block;
+    width: 192px;
+    height: 63px;
+    overflow: hidden;
+    text-indent: -999em;
+    cursor: pointer;
+}
+
+.media {
+    word-spacing: 5px;
+    color: #D1D1D1;
+}
+
+.media a {
+    color: #555
+}
+
+.down-news {
+    color: #00A383;
+    font-weight: bold
+}
+
+.m-slide-nav {
+    float: left;
+    width: 360px;
+    height: auto;
+    margin-left: 30px
+}
+
+.m-slide-nav>li {
+    list-style: none
+}
+
+.scan {
+    float: left;
+    width: 350px;
+    height: 126px;
+    box-sizing: border-box;
+    padding: 15px 0 15px 15px;
+    overflow: hidden;
+    background-color: #fff;
+    margin: 0 0 10px 10px
+}
+
+.scan>img {
+    float: left;
+    width: 96px;
+    height: 96px;
+    margin-right: 10px
+}
+
+.scan>.p1 {
+    float: left;
+    width: 220px;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    color: #484848;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 4px
+}
+
+.scan>.p2 {
+    float: left;
+    width: 220px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    color: #484848;
+    font-size: 14px
+}
+
+.scan>.p3 {
+    float: left;
+    width: 220px;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    color: #c3c3c3;
+    font-size: 12px
+}
+
+/* 通过调整位置引入小图标 */
+.icon-arrow-2,
+.icon-gift,
+.icon-home,
+.icon-spzx,
+.icon-sszx,
+.icon-yz{
+    background-image: url(../../image/download_image/comm-spr.png);
+    background-size: 393px 200px;
+    background-repeat: no-repeat
+}
+
+.right-intro {
+    float: left;
+    width: 170px;
+    height: 65px;
+    text-align: center;
+    line-height: 65px;
+    background-color: #fefefe;
+    margin: 0 0 10px 10px
+}
+
+.right-intro>a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #424242
+}
+
+.right-intro i {
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 6px 0 0
+}
+.icon-gift {
+    background-position: -285px -99px;
+    width: 18px;
+    height: 21px
+}
+
+.icon-home {
+    background-position: -343px -72px;
+    width: 16px;
+    height: 16px
+}
+
+.icon-spzx-on {
+    background-position: -193px -99px;
+    width: 18px;
+    height: 22px
+}
+
+.icon-spzx {
+    background-position: -262px -99px;
+    width: 18px;
+    height: 22px
+}
+
+.icon-sszx {
+    background-position: -220px -46px;
+    width: 22px;
+    height: 21px
+}
+
+.icon-yz {
+    background-position: -274px -46px;
+    width: 22px;
+    height: 19px
+}
+
+.footer_ied {
+    background: #1c1c1c;
+    text-align: center;
+    height: 156px
+}
+
+.footer_ied .wrap_ied {
+    width: 1240px;
+    margin: 0 auto;
+    padding: 40px 0 0
+}
+
+.footer_ied p {
+    color: #6e6e6e;
+    line-height: 24px;
+    font-size: 10px
+}
+
+.footer_ied a {
+    color: #6e6e6e;
+    font-size: 12px
+}
+

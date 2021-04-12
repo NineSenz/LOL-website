@@ -58,6 +58,10 @@ def creation():
 def service():
     return render_template('service/service.html')
 
+@app.route('/download')
+def download():
+    return render_template('downloads/downloads.html')
+
 @app.route('/create')
 def create():
     return "create message"
