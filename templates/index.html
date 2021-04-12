@@ -515,360 +515,76 @@
         </div>
         <div>
         <ul class="video-time db">
+
+        {% for x in items.video.video %}
           <li>
             <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(9).jpg" ) }}" alt="" >
+              <img src="{{ url_for( "static", filename= x.imgurl ) }}" alt="" >
               <span>
                 <em></em>
                 <u></u>
               </span>
             </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
+            <a href="#">{{ x.title }}</a>
+            <a href="#">{{ x.view }}</a>
+            <a href="#">{{ x.datetime }}</a>
           </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(13).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(14).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(10).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(12).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(23).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(16).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(26).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
+        {% endfor %}
+
+
         </ul>
         <ul class="video-time dn">
+
+        {% for x in items.video.video %}
           <li>
             <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(13).jpg" ) }}" alt="" >
+              <img src="{{ url_for( "static", filename= x.imgurl ) }}" alt="" >
               <span>
                 <em></em>
                 <u></u>
               </span>
             </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
+            <a href="#">{{ x.title }}</a>
+            <a href="#">{{ x.view }}</a>
+            <a href="#">{{ x.datetime }}</a>
           </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(9).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-             <img src="{{ url_for( "static", filename="image/index_image/0(10).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(14).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(16).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(12).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(26).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(16).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
+        {% endfor %}
+
         </ul>
         <ul class="video-time dn">
+
+            {% for x in items.video.video %}
           <li>
             <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(10).jpg" ) }}" alt="" >
+              <img src="{{ url_for( "static", filename= x.imgurl ) }}" alt="" >
               <span>
                 <em></em>
                 <u></u>
               </span>
             </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
+            <a href="#">{{ x.title }}</a>
+            <a href="#">{{ x.view }}</a>
+            <a href="#">{{ x.datetime }}</a>
           </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(16).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(26).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(9).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(10).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(14).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(10).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(12).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
+        {% endfor %}
+
         </ul>
         <ul class="video-time dn">
+
+        {% for x in items.video.video %}
           <li>
             <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(18).jpg" ) }}" alt="" >
+              <img src="{{ url_for( "static", filename= x.imgurl ) }}" alt="" >
               <span>
                 <em></em>
                 <u></u>
               </span>
             </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
+            <a href="#">{{ x.title }}</a>
+            <a href="#">{{ x.view }}</a>
+            <a href="#">{{ x.datetime }}</a>
           </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(26).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(14).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(9).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="{{ url_for( "static", filename="image/index_image/0(16).jpg" ) }}" alt="" >
-              <span>
-                <em></em>
-                <u></u>
-              </span>
-            </a>
-            <a href="#">峡谷王者秀：英雄联盟看大神们的精彩操作！王者级的</a>
-            <a href="#">1.9万次播放</a>
-            <a href="#">2019-05-22</a>
-          </li>
+        {% endfor %}
         </ul>
         </div>
       </div>

@@ -47,3 +47,9 @@ def newhero():
     with open(filename, encoding='utf-8') as f:
         newhero = json.load(f);
     return newhero;
+
+def video():
+    filename = os.path.join(app.static_folder, 'data/video.json')
+    with open(filename, encoding='utf-8') as f:
+        video = json.load(f);
+    return video;

@@ -41,6 +41,7 @@ def hello_world():
     link = getData.link()
     newskin = getData.newskin()
     newhero = getData.newhero()
+    video = getData.video()
     item={
         "banner": banner,
         "competition": competition,
@@ -48,7 +49,8 @@ def hello_world():
         "activity": activity,
         "link": link,
         "newskin": newskin,
-        "newhero": newhero
+        "newhero": newhero,
+        "video": video
     }
     return render_template('index.html', items=item)
 
