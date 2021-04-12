@@ -54,6 +54,10 @@ def competition():
 def creation():
     return render_template('creation/creation.html')
 
+@app.route('/service')
+def service():
+    return render_template('service/service.html')
+
 @app.route('/create')
 def create():
     return "create message"
