@@ -42,6 +42,18 @@ def hello_world():
 def login():
     return render_template('login/login.html')
 
+@app.route('/psp')
+def psp():
+    return render_template('psp/psp.html')
+
+@app.route('/competition')
+def competition():
+    return render_template('competition/competition.html')
+
+@app.route('/creation')
+def creation():
+    return render_template('creation/creation.html')
+
 @app.route('/create')
 def create():
     return "create message"

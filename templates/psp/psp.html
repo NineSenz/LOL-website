@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>攻略中心</title>
+    <link href="{{ url_for( "static", filename="css/psp/psp.css" ) }}" rel="stylesheet" />
+</head>
+
+<body style="display: block;">
+
+    <h1 class="hide">英雄联盟官方网站</h1>
+    <h2 class="hide">英雄联盟攻略中心</h2>
+
+    <div class="top">
+        <div class="top-inner">
+            <div class="logo">
+                <a href="#" class="logo-lol"></a>
+            </div>
+
+            <div class="menu">
+                <div class="menu-item">
+                    <a href="/" target="_blank">英雄联盟首页</a>
+                </div>
+                <div class="menu-item">
+                    <a href="/" target="_blank">游戏下载</a>
+                </div>
+            </div>
+
+            <!--玩家信息-->
+            <div class="head-user">
+                    <p class="login">亲爱的召唤师，欢迎<a href="/login" target="_blank">登录</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <div class="mid">
+            <div class="pic">
+                <img src="{{ url_for( "static", filename="image/psp_image/0.jpg" ) }}" class="top-back-img">
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-inner">
+                <div class="hero-recommend">
+                    <h3>推荐英雄攻略</h3>
+
+                    <div class="frame">
+                        <div class="hero-list">
+                            <a><img src="{{ url_for( "static", filename="image/psp_image/Thresh.png" ) }}" ></a>
+                            <a><img src="{{ url_for( "static", filename="image/psp_image/LeeSin.png" ) }}" ></a>
+                            <a><img src="{{ url_for( "static", filename="image/psp_image/Yasuo.png" ) }}" ></a>
+                            <a><img src="{{ url_for( "static", filename="image/psp_image/Ryze.png" ) }}" ></a>
+                            <a><img src="{{ url_for( "static", filename="image/psp_image/Kaisa.png" ) }}" ></a>
+                            <a><img src="{{ url_for( "static", filename="image/psp_image/JarvanIV.png" ) }}" ></a>
+                            <a><img src="{{ url_for( "static", filename="image/psp_image/Nautilus.png" ) }}" ><span>猜你喜欢</span></a>
+                            <a><img src="{{ url_for( "static", filename="image/psp_image/Renekton.png" ) }}" ><span>猜你喜欢</span></a>
+                        </div>
+                        <a class="btn-add"></a>
+
+                        <div class="hero-content">
+                                <!--英雄主图-->
+                                <div class="hero-wrap">
+                                    <img src="{{ url_for( "static", filename="image/psp_image/big412000.jpg" ) }}" >
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--英雄排行榜-->
+                <div class="hero-rank">
+
+                    <h3>英雄排行榜</h3>
+
+                    <div class="frame">
+                        <!--一级tab S-->
+                        <div class="tab-list">
+                            <a data-types="0" class="on">综合</a>
+                            <a data-types="1">胜率</a>
+                            <a data-types="2">登场率</a>
+                            <a data-types="3">禁用率</a>
+                        </div>
+
+                        <div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>排名</th>
+                                        <th><span>英雄</span></th>
+                                        <th class="nots">胜率</th>
+                                        <th class="nots">登场率</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>1</p>
+                                        </td>
+                                        <td>
+                                            <div class="hero-pic"><img src="{{ url_for( "static", filename="image/psp_image/Darius.png" ) }}" ></div>
+                                            <div>
+                                                <p>诺克萨斯之手</p>
+                                                <p>
+
+                                                    上单
+
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>49.92%</td>
+                                        <td>21.36%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <p>2</p>
+
+                                        </td>
+                                        <td>
+                                            <div class="hero-pic"><img src="{{ url_for( "static", filename="image/psp_image/Jax.png" ) }}" ></div>
+                                            <div>
+                                                <p>武器大师</p>
+                                                <p>
+
+                                                    上单
+
+                                                    打野
+
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>51.05%</td>
+                                        <td>11.42%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <p>3</p>
+
+                                        </td>
+                                        <td>
+                                            <div class="hero-pic"><img src="{{ url_for( "static", filename="image/psp_image/Kayle.png" ) }}" ></div>
+                                            <div>
+                                                <p>正义天使</p>
+                                                <p>
+
+                                                    上单
+
+                                                    中单
+
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>51.08%</td>
+                                        <td>9.48%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <p>4</p>
+
+                                        </td>
+                                        <td>
+                                            <div class="hero-pic"><img src="{{ url_for( "static", filename="image/psp_image/Fiora.png" ) }}" ></div>
+                                            <div>
+                                                <p>无双剑姬</p>
+                                                <p>
+
+                                                    上单
+
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>49.27%</td>
+                                        <td>12.55%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <p>5</p>
+
+                                        </td>
+                                        <td>
+                                            <div class="hero-pic"><img src="{{ url_for( "static", filename="image/psp_image/Riven.png" ) }}" >
+                                            <div>
+                                                <p>放逐之刃</p>
+                                                <p>
+
+                                                    上单
+
+                                                    中单
+
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>50.18%</td>
+                                        <td>9.12%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <p>6</p>
+
+                                        </td>
+                                        <td>
+                                            <div class="hero-pic"><img src="{{ url_for( "static", filename="image/psp_image/Malphite.png" ) }}" >
+                                            </div>
+                                            <div>
+                                                <p>熔岩巨兽</p>
+                                                <p>
+
+                                                    上单
+
+                                                    辅助
+
+                                                    中单
+
+                                                    打野
+
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>49.89%</td>
+                                        <td>8.75%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <p>7</p>
+
+                                        </td>
+                                        <td>
+                                            <div class="hero-pic"><img src="{{ url_for( "static", filename="image/psp_image/Gangplank.png" ) }}" >
+                                            </div>
+                                            <div>
+                                                <p>海洋之灾</p>
+                                                <p>
+
+                                                    上单
+
+                                                    中单
+
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>49.57%</td>
+                                        <td>9.63%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <p>8</p>
+
+                                        </td>
+                                        <td>
+                                            <div class="hero-pic"><img src="{{ url_for( "static", filename="image/psp_image/Camille.png" ) }}" ></div>
+                                            <div>
+                                                <p>青钢影</p>
+                                                <p>
+
+                                                    上单
+
+                                                    中单
+
+                                                    打野
+
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>50.34%</td>
+                                        <td>6.1%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <p>9</p>
+
+                                        </td>
+                                        <td>
+                                            <div class="hero-pic"><img src="{{ url_for( "static", filename="image/psp_image/Renekton.png" ) }}" ></div>
+                                            <div>
+                                                <p>荒漠屠夫</p>
+                                                <p>
+
+                                                    上单
+
+                                                    中单
+
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>47.33%</td>
+                                        <td>12.75%</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <p>10</p>
+
+                                        </td>
+                                        <td>
+                                            <div class="hero-pic"><img src="{{ url_for( "static", filename="image/psp_image/Mordekaiser.png" ) }}" >
+                                            </div>
+                                            <div>
+                                                <p>铁铠冥魂</p>
+                                                <p>
+
+                                                    上单
+
+                                                    中单
+
+                                                </p>
+                                            </div>
+                                        </td>
+                                        <td>49.44%</td>
+                                        <td>6.14%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="bottom-pic">
+                    <h3>精选专题</h3>
+                    <div class="act-list clearfix">
+
+                        <a href="#">
+                            <img src="{{ url_for( "static", filename="image/psp_image/1.jpg" ) }}" >
+                            <b class="type-1">新手专题</b>
+                            <span>LOL侠客眼位教学合集：新手的福利礼包，高手的进阶之道</span>
+                        </a>
+
+                        <a href="#">
+                            <img src="{{ url_for( "static", filename="image/psp_image/2.jpg" ) }}" >
+                            <b class="type-1">英雄专题</b>
+                            <span>兔玩英雄训练营：英雄打法与技巧</span>
+                        </a>
+
+                        <a href="#">
+                            <img src="{{ url_for( "static", filename="image/psp_image/3.jpg" ) }}" >
+                            <b class="type-1">新手专题</b>
+                            <span>懒人一图看版本：快速了解版本改动</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="wrap">
+            <p><a href="#" target="_blank">腾讯互动娱乐</a> | <a href="#" target="_blank">服务条款</a>| <a href="#"
+                    target="_blank">腾讯游戏隐私保护指引</a>| <a href="#" target="_blank">腾讯游戏儿童隐私保护指引</a>| <a href="#"
+                    target="_blank">广告服务</a> | <a href="#" target="_blank">腾讯游戏招聘</a> | <a href="#"
+                    target="_blank">腾讯游戏客服</a> | <a href="#" target="_blank">游戏地图</a> | <a href="#"
+                    target="_blank">成长守护平台</a> | <a href="#" target="_blank">商务合作</a> | <a href="#"
+                    target="_blank">网站导航</a></p>
+            <p>COPYRIGHT &copy; 1998 – 2019 TENCENT. ALL RIGHTS RESERVED.</p>
+            <p><a href="#" target="_blank">腾讯公司 版权所有</a></p>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,416 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0
+}
+
+a {
+    text-decoration: none
+}
+
+img {
+    border: 0
+}
+
+body {
+    color: #fff;
+    font-size: 0;
+    line-height: 0;
+    font-family: tahoma, '\5FAE\8F6F\96C5\9ED1', sans-serif
+}
+
+li {
+    list-style-type: none
+}
+.stage-time-bg {
+    background-image: url("../../image/competition_image/index.png");
+    background-size: 609px 309px;
+    background-repeat: no-repeat
+}
+
+.match-stage .award-item .cup,
+.stage-player-bg {
+    background-image: url("../../image/competition_image/index-stage.png");
+    background-size: 491px 448px;
+    background-repeat: no-repeat
+}
+
+/* 布局 */
+.g-wrap {
+    width: 100%;
+    min-width: 1200px;
+    margin: 0 auto;
+    height: auto;
+    overflow: hidden;
+    position: relative
+}
+
+
+/* 顶部条 */
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 110px;
+    line-height: 110px;
+    overflow: visible;
+    background-size: cover
+}
+
+.top-bar .inner {
+    width: 1200px;
+    height: 110px;
+    overflow: visible;
+    margin: 0 auto
+}
+
+.top-bar .logo-list .logo-item {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0;
+    margin: 0 7px 0 15px
+}
+
+
+/* 头部图标 */
+.pre_bg {
+    background: url("../../image/competition_image/top20191201.png") no-repeat;
+}
+
+.pre {
+    width: 100%;
+    height: 42px;
+    background-repeat: repeat-x;
+    color: #464646;
+    left: 0;
+    top: 0 !important;
+    text-align: left;
+    font-size: 12px;
+    font-family: Tahoma;
+    overflow: hidden;
+}
+
+.pre_b {
+    width: 980px;
+    padding: 0 5px;
+    margin: 0 auto;
+    position: relative;
+    list-style: none;
+}
+
+.pre_tg {
+    width: 205px;
+    height: 42px;
+    padding: 0 15px 0 0;
+    margin: 0 15px 0 0;
+    float: left;
+    background-position: 0 -42px;
+}
+
+.pre_blnk {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -5000px;
+    overflow: hidden;
+}
+
+.pre_gg {
+    width: 230px;
+    height: 42px;
+    float: left;
+    background-position: 0 -84px;
+}
+
+.pre_link {
+    height: 42px;
+    line-height: 42px;
+    float: right;
+}
+
+.download {
+    float: right;
+}
+
+.pre_lnk {
+    color: #464646 !important;
+    border-right: 1px solid #BFC6D7;
+	padding: 0 3px;
+	text-decoration: none;
+}
+
+.pre_lnk:hover {
+    color: #0096D0 !important;
+}
+
+.page {
+    float: right;
+    width: 80px;
+    padding: 0 0 0 28px;
+    background-position: 10px -126px;
+}
+
+/* banner */
+.banner {
+    width: 100%;
+    margin: 0 auto;
+    height: 770px;
+    overflow: hidden;
+    position: relative
+}
+
+.banner .main-pic img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -960px;
+    width: 1920px;
+    height: 770px
+}
+
+
+/* 联赛界面 */
+.match-stage {
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 25px
+}
+
+.match-stage .u-h1-title {
+    display: block;
+    width: 100%;
+    line-height: 100px;
+    font-size: 0;
+    font-weight: 400
+}
+
+.match-stage .u-h1-title .font-dbjgxlsjc {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("../../image/competition_image/font-title-dbjgxlsjc.png");
+    width: 360px;
+    height: 31px
+}
+
+.match-stage .u-h2-title {
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    color: #4c4c4c;
+    text-align: center;
+    position: relative
+}
+
+.match-stage .u-h2-title::after {
+    content: "\0020";
+    width: 50px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom: -10px;
+    background-color: #4c4c4c
+}
+
+.match-stage .award-wrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    margin: 40px 0 60px 0
+}
+
+.match-stage .award-item {
+    display: inline-block;
+    vertical-align: middle;
+    width: 540px;
+    height: auto;
+    overflow: hidden;
+    text-align: center
+}
+
+.match-stage .award-item .cup {
+    display: inline-block;
+    vertical-align: middle;
+    background-position: -206px 0;
+    width: 149px;
+    height: 159px;
+    margin: 0 40px
+}
+
+.match-stage .award-item .list {
+    display: inline-block;
+    vertical-align: middle;
+    width: 290px;
+    height: auto;
+    overflow: hidden;
+    text-align: left
+}
+
+.match-stage .award-item .list .name {
+    font-weight: 700;
+    color: #7d7d7d;
+    font-size: 26px;
+    line-height: 1;
+    margin-top: 30px
+}
+
+.match-stage .award-item .list .name .blue {
+    color: #2f5fb5
+}
+
+.match-stage .award-item .list .tag {
+    display: inline-block;
+    vertical-align: middle;
+    vertical-align: auto;
+    border-radius: 4px;
+    padding: 0 17px;
+    height: 23px;
+    line-height: 23px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: #2f5fb5;
+    margin-right: 9px;
+}
+
+.match-stage .award-item .list .p1 {
+    margin-top: 18px;
+    color: #4f4e4e;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 23px;
+    overflow: hidden
+}
+
+.match-stage .award-item .list .p1 .m {
+    color: #2f5fb5;
+    font-size: 12px;
+    float: left;
+    line-height: 33px
+}
+
+.match-stage .award-item .list .p1 .money {
+    font-weight: 700;
+    font-size: 26px;
+    color: #2f5fb5;
+    float: left;
+    line-height: 23px
+}
+
+.match-stage .award-item .list .p2 {
+    font-size: 14px;
+    line-height: 23px;
+    color: #4f4e4e;
+    font-weight: 700;
+    margin-top: 10px
+}
+
+.match-stage-content {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    background-color: #f2f3f8;
+    padding-bottom: 40px
+}
+
+.stage-container-list {
+    width: 1200px;
+    height: auto;
+    margin: 76px auto 0 auto
+}
+
+
+/* 关于高校联赛 */
+.about-lcl {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 25px;
+    overflow: visible
+}
+
+.about-lcl .u-h1-title {
+    display: block;
+    width: 100%;
+    line-height: 100px;
+    font-size: 0;
+    font-weight: 400
+}
+
+.about-lcl .u-h1-title .font-gxls {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("../../image/competition_image/font-title-gydbjqggxls.png");
+    width: 440px;
+    height: 31px
+}
+
+.about-lcl .introduction {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 25px;
+    margin-bottom: 25px
+}
+
+.about-lcl .introduction .logo {
+    float: left
+}
+
+.about-lcl .introduction .font {
+    float: right;
+    width: 822px;
+    height: auto
+}
+
+.about-lcl .introduction .font .title {
+    font-size: 24px;
+    color: #4f4e4e;
+    line-height: 43px;
+    margin-top: 15px
+}
+
+.about-lcl .introduction .font .line {
+    display: block;
+    width: 33px;
+    height: 2px;
+    background: #888;
+    margin: 11px 0
+}
+
+.about-lcl .introduction .font .detail {
+    font-size: 14px;
+    color: #888;
+    line-height: 31px
+}
+
+
+.footer {
+    background: #1c1c1c;
+    text-align: center;
+    height: 156px
+}
+
+.footer .wrap {
+    width: 1240px;
+    margin: 0 auto;
+    padding: 40px 0 0
+}
+
+.footer p {
+    color: #6e6e6e;
+    line-height: 24px;
+    font-size: 10px
+}
+
+.footer a {
+    color: #6e6e6e;
+    font-size: 12px
+}
+
