@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>新手指引</title>
+  <link href="{{ url_for( "static", filename="css/guide/guide.css" ) }}" rel="stylesheet" />
+</head>
+
+<body class="newbie">
+  <div class="comm-head">
+    <div class="head-normal">
+      <!--logo-->
+      <a class="logo" href="#" title="英雄联盟官网">
+         <img src="{{ url_for( "static", filename="image/guide_image/logo-public.png" ) }}" alt="英雄联盟" width="167" height="60">
+      </a>
+      <!--官网导航-->
+      <ul class="head-nav">
+        <li>
+          <span class="head-nav-title">游戏资料</span>
+          <span class="head-nav-subtitle">GAME INFO</span>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <span class="head-nav-title">商城/合作</span>
+            <span class="head-nav-subtitle">STORE</span>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <span class="head-nav-title">社区互动</span>
+            <span class="head-nav-subtitle">COMMUNITY</span>
+          </a>
+        </li>
+
+        <li>
+          <span class="head-nav-title">赛事官网</span>
+          <span class="head-nav-subtitle">ESPORTS</span>
+          </a>
+        </li>
+
+        <li>
+          <a>
+            <span class="head-nav-title">自助系统</span>
+            <span class="head-nav-subtitle">SYSTEM</span>
+          </a>
+        </li>
+      </ul>
+
+      <!--玩家信息-->
+      <div class="head-userinfo-normal">
+        <div class="head-userinfo-profile">
+            <img src="{{ url_for( "static", filename="image/guide_image/default.png" ) }}" alt="玩家头像" width="36" height="auto">
+        </div>
+        <div class="head-userinfo-brief">
+          <p class="unlogin">亲爱的召唤师，欢迎<a href="/login" target="_blank">登录</a></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!--官网通用页头 end-->
+  <!--头部广告 start-->
+  <div class="comm-topact">
+    <img class="big-image" src="{{ url_for( "static", filename="image/guide_image/0.jpg" ) }}" alt="玩家头像" width="36" height="auto">
+    <div class="dark-line"></div>
+    <div class="right-link">
+      <a class="top-act-link" href="#" target="_blank">查看详情</a>
+      <div class="top-version">当前游戏版本：<em>Ver 9.22</em> <a class="top-version-link" href="#" target="_blank">版本详情</a>
+      </div>
+    </div>
+  </div>
+  <!--头部广告 end-->
+  <div class="wraper">
+    <div class="mainer">
+      <!--路径导航-->
+      <div class="website-path">
+        <a href="/" target="_blank">英雄联盟首页</a>
+        <i class="gap"></i>
+        <a class="here">新手指引</a>
+      </div>
+      <div class="newbienav">
+        <ul class="clearfix newbienav-light">
+          <li class="nb1"><a href="#" class="list">什么是LOL</a></li>
+          <li class="nb2"><a href="#" class="list">下载与安装</a></li>
+          <li class="nb3"><a href="#" class="list">新手攻略</a></li>
+          <li class="nb4"><a href="#" class="list">游戏进阶</a></li>
+          <li class="nb5"><a href="#" class="list">活动成长</a></li>
+        </ul>
+      </div>
+      <div class="newbie-what">
+        <div class="borlineX clearfix">
+          <div class="frame-right newbie-textbox">
+            <h2 class="newbie-title">什么是英雄联盟？</h2>
+            <p>英雄联盟（League of Legends）是由美国Riot
+              Games开发，腾讯游戏运营的全新英雄对战网游。英雄联盟的主创团队由各著名游戏公司的核心美术、策划、程序人员组成，他们打造了游戏中风格特色各异的英雄，加入更加丰富的物品合成系统、地图玩法、天梯匹配机制，以及独创的“召唤师”技能、符文、天赋组合，让玩家感受不一样的英雄对战网游。
+            </p>
+            <p>在游戏中，玩家将扮演一位召唤者，并选择你所信任的联盟国进入这个游戏的正义领域，为了控制瓦罗然的权利而奋战。在这个联盟中只有一条规则：胜者就是一切！</p>
+          </div>
+        </div>
+        <ul class="clearfix newbie-what-second">
+          <li>
+            <div class="frame-left newbie-textbox">
+              <h2 class="newbie-title">全新英雄对战网游</h2>
+              <p>
+                英雄联盟中拥有的海量英雄及皮肤让人印象深刻——这些英雄不仅在外观上风格迥异，甚至个个都有自己独特的性格和脾气，例如：正气凛然的无畏先锋军团领袖—德玛西亚之力盖伦、意志坚强的弗雷尔卓德部族领袖—寒冰射手艾希、乐于钻研的魔法学者—流浪法师瑞兹……除此之外，你还可以在英雄联盟中看到代表不同地域文化特色的角色或皮肤，其中包括中国武术大师、北欧冰雪巨人、日本忍者、古埃及神话角色等。
+              </p>
+              <p>在游戏中，身为召唤师的玩家在每局游戏中都将召唤一位英雄帮助自己进行战斗。目前已经有许多英雄协助他们达成目标，在英雄联盟中完成各自心中的正义之战！我们也深信，在英雄联盟超过100位英雄中，总有一个是合适你的！
+              </p>
+              <p>英雄，为你而战！</p>
+              <p>注：英雄联盟每周有13位免费英雄可供使用。</p>
+              <div class="newbie-btns">
+                <a href="//lol.qq.com/act/a20110408tests/" target="_blank"
+                  class="commspr commbtn-green2">寻找您喜爱的英雄</a>&nbsp;&nbsp;<a href="#" target="_blank"
+                  class="commspr commbtn-green2">查看所有英雄</a>
+              </div>
+            </div>
+            <div class="frame-right">
+                <img src="{{ url_for( "static", filename="image/guide_image/newbie_01.jpg" ) }}" alt="全新英雄对战网游">
+          </li>
+        </ul>
+        <ul class="newbie-what-reel">
+          <li><span rel="_n1" class="commspr line current"><i class="commspr point"></i></span></li>
+          <li><span rel="_n2" class="commspr line"><i class="commspr point"></i></span></li>
+          <li><span rel="_n3" class="commspr line"><i class="commspr point"></i></span></li>
+          <li><span rel="_n4" class="commspr line"><i class="commspr point"></i></span></li>
+          <li><span rel="_n5" class="commspr line"><i class="commspr point"></i></span></li>
+        </ul>
+
+        <div class="newbie-downbtn">
+          <a href="/download" title="立即下载英雄联盟" class="commspr commbtn-downs">
+            <b class="none">立即下载英雄联盟</b>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="wrap">
+        <p><a href="#" target="_blank">腾讯互动娱乐</a> | <a href="#" target="_blank">服务条款</a>| <a href="#"
+                target="_blank">腾讯游戏隐私保护指引</a>| <a href="#" target="_blank">腾讯游戏儿童隐私保护指引</a>| <a href="#"
+                target="_blank">广告服务</a> | <a href="#" target="_blank">腾讯游戏招聘</a> | <a href="#"
+                target="_blank">腾讯游戏客服</a> | <a href="#" target="_blank">游戏地图</a> | <a href="#"
+                target="_blank">成长守护平台</a> | <a href="#" target="_blank">商务合作</a> | <a href="#"
+                target="_blank">网站导航</a></p>
+        <p>COPYRIGHT &copy; 1998 – 2019 TENCENT. ALL RIGHTS RESERVED.</p>
+        <p><a href="#" target="_blank">腾讯公司 版权所有</a></p>
+    </div>
+</div>
+
+  </body>
+</html>
