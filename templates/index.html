@@ -176,9 +176,9 @@
 		<div class="tab-carousel">
 			<div class="carousel">
 		        <ul>
-                {% for x in items.banner.banner %}
+                {% for x in items.banner %}
 		          <li>
-		          	<img src="{{ url_for( "static", filename= x.imgUrl ) }}" >
+		          	<img src="{{ url_for( "static", filename= x[0] ) }}" >
 		          </li>
                 {% endfor %}
 		        </ul>
@@ -212,13 +212,13 @@
               </a>
             </li>
 
-          {% for x in items.notice.notice %}
+          {% for x in items.competition %}
             <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                {{ x.title }}
+              <span class="item-type">攻略</span>
+              <a class="item-href" href={{ x[1] }}>
+                {{ x[2] }}
               </a>
-              <span class="item-time">{{ x.datetime }}</span>
+              <span class="item-time">{{ x[3] }}</span>
             </li>
           {% endfor %}
 
@@ -230,13 +230,13 @@
               </a>
             </li>
 
-          {% for x in items.competition.competition %}
+          {% for x in items.notice %}
             <li>
-              <span class="item-type">公告</span>
-              <a class="item-href" href="#">
-                {{ x.title }}
+              <span class="item-type">攻略</span>
+              <a class="item-href" href={{ x[1] }}>
+                {{ x[2] }}
               </a>
-              <span class="item-time">{{ x.datetime }}</span>
+              <span class="item-time">{{ x[3] }}</span>
             </li>
           {% endfor %}
 
@@ -248,13 +248,13 @@
               </a>
             </li>
 
-          {% for x in items.competition.competition %}
+          {% for x in items.competition %}
             <li>
               <span class="item-type">攻略</span>
-              <a class="item-href" href="#">
-                {{ x.title }}
+              <a class="item-href" href={{ x[1] }}>
+                {{ x[2] }}
               </a>
-              <span class="item-time">{{ x.datetime }}</span>
+              <span class="item-time">{{ x[3] }}</span>
             </li>
           {% endfor %}
 
@@ -267,13 +267,13 @@
               </a>
             </li>
 
-          {% for x in items.competition.competition %}
+          {% for x in items.notice %}
             <li>
-              <span class="item-type">社区</span>
-              <a class="item-href" href="#">
-                {{ x.title }}
+              <span class="item-type">攻略</span>
+              <a class="item-href" href={{ x[1] }}>
+                {{ x[2] }}
               </a>
-              <span class="item-time">{{ x.datetime }}</span>
+              <span class="item-time">{{ x[3] }}</span>
             </li>
           {% endfor %}
 
@@ -285,13 +285,13 @@
               </a>
             </li>
 
-          {% for x in items.competition.competition %}
+          {% for x in items.competition %}
             <li>
-              <span class="item-type">活动</span>
-              <a class="item-href" href="#">
-                {{ x.title }}
+              <span class="item-type">攻略</span>
+              <a class="item-href" href={{ x[1] }}>
+                {{ x[2] }}
               </a>
-              <span class="item-time">{{ x.datetime }}</span>
+              <span class="item-time">{{ x[3] }}</span>
             </li>
           {% endfor %}
 
@@ -319,19 +319,19 @@
           <div class="m-act-list">
             <ul class="db">
 
-            {% for x in items.activity.activity %}
+            {% for x in items.activity %}
               <li>
                 <a href="#">
-                	<img src="{{ url_for( "static", filename= x.imgurl ) }}" alt="" title={{ x.title[0] }} >
+                	<img src="{{ url_for( "static", filename= x[1] ) }}" alt="" title={{ x[2] }} >
                 </a>
-                <p class="titlelist">{{ x.title[0] }}</p>
-                <a href="#" class="timing">{{ x.title[1] }}</a>
+                <p class="titlelist">{{ x[3] }}</p>
+                <a href="#" class="timing">{{ x[4] }}</a>
                 <em></em>
                 <div class="mask">
                   <div class="mask-news">
-                    <h3>{{ x.body[0] }}</h3>
-                    <p>{{ x.body[1] }}</p>
-                    <p>{{ x.body[2] }}</p>
+                    <h3>{{ x[5] }}</h3>
+                    <p>{{ x[6] }}</p>
+                    <p>{{ x[7] }}</p>
                   </div>
                 </div>
               </li>
@@ -351,10 +351,10 @@
             <li class="p2 flashmen">
               <a href="#">领取中心</a>
             </li>
-          {% for x in items.link.link %}
+          {% for x in items.link %}
             <li class="p3">
               <em></em>
-              <a href="#">{{ x.title }}</a>
+              <a href="#">{{ x[1] }}</a>
             </li>
           {% endfor %}
             <li class="p4">

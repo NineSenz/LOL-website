@@ -2,42 +2,62 @@ import os
 from flask import Flask, url_for
 from flask import render_template
 import json
+import pymysql
 
 app = Flask(__name__)
 
+def execte_db(sql):
+    conn = pymysql.connect(host="127.0.0.1", user="root", password="bettertree@123", database="lol", charset="utf8")
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    result = cursor.fetchall()
+    cursor.close()
+    conn.close()
+    return result;
+
 
 def banner():
-    filename = os.path.join(app.static_folder, 'data/banner.json')
-    with open(filename, encoding="utf-8") as f:
-        banner = json.load(f);
+
+    sql = """
+    		SELECT imgurl FROM banner
+    		"""
+    banner = execte_db(sql)
     return banner;
 
 
 def competition():
-    filename = os.path.join(app.static_folder, 'data/competition.json')
-    with open(filename, encoding="utf-8") as f:
-        competition = json.load(f);
+    sql = """
+        		SELECT * FROM competition
+        		"""
+
+    competition = execte_db(sql)
     return competition;
 
 
 def notice():
-    filename = os.path.join(app.static_folder, 'data/notice.json')
-    with open(filename, encoding="utf-8") as f:
-        notice = json.load(f);
+    sql = """
+            		SELECT * FROM notice
+            		"""
+
+    notice = execte_db(sql)
     return notice;
 
 
 def activity():
-    filename = os.path.join(app.static_folder, 'data/activity.json')
-    with open(filename, encoding="utf-8") as f:
-        activity = json.load(f);
+    sql = """
+                		SELECT * FROM activity
+                		"""
+
+    activity = execte_db(sql)
     return activity;
 
 
 def link():
-    filename = os.path.join(app.static_folder, 'data/link.json')
-    with open(filename, encoding="utf-8") as f:
-        link = json.load(f);
+    sql = """
+                    		SELECT * FROM link
+                    		"""
+
+    link = execte_db(sql)
     return link;
 
 
