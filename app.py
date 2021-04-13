@@ -35,7 +35,6 @@ def hello_world():
         "video": video,
         "issue": issue
     }
-    print(activity)
     return render_template('index.html', items=item)
 
 @app.route('/login')

@@ -251,10 +251,8 @@
 	</div>
 	<!-- banner end -->
 
-	<!-- 热门活动 -->
 	<div class="m-act">
       <div class="m-act-top">
-        <!-- 上部分左边 -->
         <div class="m-act-top-left">
           <div class="m-act-title">
             <h2>熱門活動</h2>
@@ -295,13 +293,7 @@
             <li class="p2 flashmen">
               <a href="#">領取中心</a>
             </li>
-          {% for x in items.link %}
             <li class="p3">
-              <em></em>
-              <a href="#">{{ x[1] }}</a>
-            </li>
-          {% endfor %}
-            <li class="p4">
               <em></em>
               <a href="#">峽谷之巔</a>
             </li>
@@ -322,7 +314,6 @@
           </ul>
         </div>
       </div>
-      <!-- 下半部分开始 -->
       <div class="m-act-bottom">
         <div class="m-act-bottom-left">
           <div class="champion-one">
@@ -389,14 +380,11 @@
               </ul>
             </div>
           </div>
-          <!-- 新皮肤版本完成 -->
         </div>
         <div class="m-act-bottom-right">
-          <!-- 新版本 -->
           <div class="new-vision">
           	<img src="{{ url_for( "static", filename="image/index_image/version.png" ) }}" alt="" >
           </div>
-          <!-- 新创作 -->
           <div class="club-develop">
           	<img src="{{ url_for( "static", filename="image/index_image/0(3).jpg" ) }}" alt="" >
             <a href="#" title="小恶魔 崔丝塔娜：原画&炫彩皮肤">
