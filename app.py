@@ -66,6 +66,10 @@ def download():
 def guide():
     return render_template('guide/guide.html')
 
+@app.route('/report')
+def report():
+    return render_template('report/report.html')
+
 @app.route('/create')
 def create():
     return "create message"

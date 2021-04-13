@@ -7,7 +7,7 @@ import pymysql
 app = Flask(__name__)
 
 def execte_db(sql):
-    conn = pymysql.connect(host="127.0.0.1", user="root", password="xxx@123", database="lol", charset="utf8")
+    conn = pymysql.connect(host="127.0.0.1", user="root", password="bettertree@123", database="lol", charset="utf8")
     cursor = conn.cursor()
     cursor.execute(sql)
     result = cursor.fetchall()
