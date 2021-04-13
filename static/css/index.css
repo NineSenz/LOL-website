@@ -7,8 +7,8 @@ header{
 .head-bgimg{
   width: 100%;
   min-width: 1358px;
-  height: 360px;;
-  background: url("../image/index_image/big.png") no-repeat;
+  height: 360px;
+  background: url("../image/index_image/big.png") center center no-repeat;
   position: absolute;
   top: 0;
   z-index: -1;
