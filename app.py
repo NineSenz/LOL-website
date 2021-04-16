@@ -77,12 +77,42 @@ def login():
         data = json.loads(request.form.get('data'))
         username = data['username']
         password = data['password']
-        result = getData.check_user(username, password)
+        result = getData.login(username, password)
         if len(result) == 0:
             return '0'
         else:
             return '1'
 
+
+@app.route('/register/', methods=['GET', 'POST'])
+def register():
+    if request.method == 'GET':
+        return render_template('register/register.html')
+    elif request.method == 'POST':
+        data = json.loads(request.form.get('data'))
+        username = data['username']
+        password = data['password']
+        email = data['email']
+        mobile = data['mobile']
+        user = {
+            "username": username,
+            "password": password,
+            "email": email,
+            "mobile": mobile
+        }
+        result = getData.register(user)
+        print(result)
+        return '1'
+
+
+@app.route('/checkuser', methods=['GET', 'POST'])
+def check():
+    if request.method == 'GET':
+        pass
+    elif request.method == 'POST':
+        data = request.form.get('data')
+        print(type(data))
+    return '0'
 
 
 @app.route('/create')

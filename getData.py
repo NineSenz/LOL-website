@@ -6,6 +6,7 @@ import pymysql
 
 app = Flask(__name__)
 
+
 def execte_db(sql):
     conn = pymysql.connect(host="127.0.0.1", user="root", password="bettertree@123", database="lol", charset="utf8")
     cursor = conn.cursor()
@@ -17,7 +18,6 @@ def execte_db(sql):
 
 
 def banner():
-
     sql = """
     		SELECT imgurl FROM banner
     		"""
@@ -60,15 +60,46 @@ def link():
     link = execte_db(sql)
     return link
 
-def check_user(username, password):
+
+def login(username, password):
     print(password)
-    sql = "SELECT * FROM user WHERE username='%s" %username + "' and password='%s" %password + "'"
+    sql = "SELECT * FROM user WHERE username='%s" % username + "' and password='%s" % password + "'"
     print(sql)
     check = execte_db(sql)
     return check
 
+
 def register(user):
-    sql = "INSERT INTO `user` (`email`, `username`, `password`, `mobile`) VALUES ('%s " %user.email + " ', '%s  " %user.username  +"', ' %s " %user.password +"', ' %s" %user.mobile +"')"
+    email = user["email"]
+    username = user["username"]
+    password = user["password"]
+    mobile = user["mobile"]
+    con = pymysql.connect(host='localhost', user='root', password='bettertree@123', database='lol', port=3306)
+    # 创建游标对象
+    cur = con.cursor()
+    # 编写插入数据的sql
+    sql = 'insert into user(email,username,password,mobile) value(%s,%s,%s,%s)'
+    try:
+        # 执行sql
+        cur.executemany(sql, [(email, username, password, mobile)])
+        # 提交事务
+        con.commit()
+        print('插入成功')
+    except Exception as e:
+        print(e)
+        con.rollback()
+        print('插入失败')
+    finally:
+        con.close()
+
+
+
+def check(username):
+    sql = "SELECT * FROM user WHERE username='%s" % username + "'"
+    print(sql)
+    check = execte_db(sql)
+    print(check)
+    return check
 
 
 def newskin():
@@ -97,4 +128,3 @@ def issue():
     with open(filename, encoding='utf-8') as f:
         issue = json.load(f);
     return issue;
-
