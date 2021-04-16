@@ -61,6 +61,9 @@ def link():
     return link;
 
 
+def register(user):
+    sql = "INSERT INTO `user` (`email`, `username`, `password`, `mobile`) VALUES ('%s " %user.email + " ', '%s  " %user.username  +"', ' %s " %user.password +"', ' %s" %user.mobile +"')"
+
 def newskin():
     filename = os.path.join(app.static_folder, 'data/newskin.json')
     with open(filename, encoding='utf-8') as f:
@@ -87,3 +90,4 @@ def issue():
     with open(filename, encoding='utf-8') as f:
         issue = json.load(f);
     return issue;
+
