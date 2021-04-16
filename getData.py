@@ -13,7 +13,7 @@ def execte_db(sql):
     result = cursor.fetchall()
     cursor.close()
     conn.close()
-    return result;
+    return result
 
 
 def banner():
@@ -22,47 +22,54 @@ def banner():
     		SELECT imgurl FROM banner
     		"""
     banner = execte_db(sql)
-    return banner;
+    return banner
 
 
 def competition():
     sql = """
-        		SELECT * FROM competition
-        		"""
+        SELECT * FROM competition
+        """
 
     competition = execte_db(sql)
-    return competition;
+    return competition
 
 
 def notice():
     sql = """
-            		SELECT * FROM notice
-            		"""
+            SELECT * FROM notice
+            """
 
     notice = execte_db(sql)
-    return notice;
+    return notice
 
 
 def activity():
     sql = """
-                		SELECT * FROM activity
-                		"""
+            SELECT * FROM activity
+            """
 
     activity = execte_db(sql)
-    return activity;
+    return activity
 
 
 def link():
     sql = """
-                    		SELECT * FROM link
-                    		"""
+            SELECT * FROM link
+            """
 
     link = execte_db(sql)
-    return link;
+    return link
 
+def check_user(username, password):
+    print(password)
+    sql = "SELECT * FROM user WHERE username='%s" %username + "' and password='%s" %password + "'"
+    print(sql)
+    check = execte_db(sql)
+    return check
 
 def register(user):
     sql = "INSERT INTO `user` (`email`, `username`, `password`, `mobile`) VALUES ('%s " %user.email + " ', '%s  " %user.username  +"', ' %s " %user.password +"', ' %s" %user.mobile +"')"
+
 
 def newskin():
     filename = os.path.join(app.static_folder, 'data/newskin.json')
