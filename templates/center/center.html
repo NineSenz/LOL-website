@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>LarryBlogCMS-Home</title>
+    <link  rel="shortcut icon" href="{{ url_for( "static", filename="favicon.ico" ) }}">
+    <link  media="all" href="{{ url_for( "static", filename="css/center/common/layui/css/layui.css" ) }}" rel="stylesheet" />
+    <link  media="all" href="{{ url_for( "static", filename="css/center/common/bootstrap/css/bootstrap.css" ) }}" rel="stylesheet" />
+    <link  media="all" href="{{ url_for( "static", filename="css/center/common/global.css" ) }}" rel="stylesheet" />
+    <link  media="all" href="{{ url_for( "static", filename="css/center/main.css" ) }}" rel="stylesheet" />
+</head>
+<body>
+<section class="larry-wrapper">
+    <!-- overview -->
+	<div class="row state-overview">
+		<div class="col-lg-3 col-sm-6">
+			<section class="panel">
+				<div class="symbol userblue"> <i class="iconpx-users"></i>
+
+				</div>
+				<div class="value">
+					<a href="#">
+						<h1 id="count1">10</h1>
+					</a>
+					<p>用户总量</p>
+				</div>
+			</section>
+		</div>
+		<div class="col-lg-3 col-sm-6">
+			<section class="panel">
+				<div class="symbol commred"> <i class="iconpx-user-add"></i>
+				</div>
+				<div class="value">
+					<a href="#">
+						<h1 id="count2">1</h1>
+					</a>
+					<p>今日注册用户</p>
+				</div>
+			</section>
+		</div>
+		<div class="col-lg-3 col-sm-6">
+			<section class="panel">
+				<div class="symbol articlegreen">
+					<i class="iconpx-file-word-o"></i>
+				</div>
+				<div class="value">
+					<a href="#">
+						<h1 id="count3">50</h1>
+					</a>
+					<p>文章总数</p>
+				</div>
+			</section>
+		</div>
+		<div class="col-lg-3 col-sm-6">
+			<section class="panel">
+				<div class="symbol rsswet">
+					<i class="iconpx-check-circle"></i>
+				</div>
+				<div class="value">
+					<a href="#">
+						<h1 id="count4">0</h1>
+					</a>
+					<p>待审文章总数</p>
+				</div>
+			</section>
+		</div>
+	</div>
+	<!-- overview end -->
+	<div class="row">
+		<div class="col-lg-12">
+			<section class="panel">
+				<header class="panel-heading bm0">
+					<span class='span-title'>玩家信息</span>
+					<span class="tools pull-right"><a href="javascript:;" class="iconpx-chevron-down"></a></span>
+				</header>
+				<div class="panel-body" >
+					<table class="table table-hover personal-task">
+                         <tbody>
+                         	<tr>
+                         		<td>
+                         			<strong>玩家编号</strong>：111
+
+                         		</td>
+                         		<td>
+                                    <button class="btn btn-primary">编辑</button>
+                         		</td>
+                         	</tr>
+                         	<tr>
+                         		<td>
+                                    <strong>玩家昵称</strong>： Larry
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary">编辑</button>
+                                </td>
+                         	</tr>
+                         	<tr>
+                         		<td>
+                                    <strong>联系方式</strong>：13242223534
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary">编辑</button>
+                                </td>
+                         	</tr>
+                         	<tr>
+                         		<td>
+                                <strong>段位</strong>：倔强青铜
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary">编辑</button>
+                                </td>
+                         	</tr>
+                         	<tr>
+                         		<td>
+                                <strong>服务大区</strong>：德玛西亚
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary">编辑</button>
+                                </td>
+                         	</tr>
+                         	<tr>
+                         		<td>
+                                <strong>点券</strong>：0
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary">编辑</button>
+                                </td>
+                         	</tr>
+                         	<tr>
+                         		<td>
+                                    <strong>蓝色精粹</strong>： 3000
+                                </td>
+                                <td>
+                                    <button class="btn btn-primary">编辑</button>
+                                </td>
+                         	</tr>
+                         </tbody>
+					</table>
+				</div>
+			</section>
+		</div>
+	</div>
+
+</section>
+<script src="{{ url_for( "static", filename="css/center/common/layui/layui.js" ) }}"></script>
+<script type="text/javascript">
+	layui.use(['jquery','layer','element'],function(){
+		window.jQuery = window.$ = layui.jquery;
+		window.layer = layui.layer;
+        window.element = layui.element();
+
+       $('.panel .tools .iconpx-chevron-down').click(function(){
+       	   var el = $(this).parents(".panel").children(".panel-body");
+       	   if($(this).hasClass("iconpx-chevron-down")){
+       	   	   $(this).removeClass("iconpx-chevron-down").addClass("iconpx-chevron-up");
+       	   	   el.slideUp(200);
+       	   }else{
+       	   	   $(this).removeClass("iconpx-chevron-up").addClass("iconpx-chevron-down");
+       	   	   el.slideDown(200);
+       	   }
+       })
+
+	});
+</script>
+<script src="{{ url_for( "static", filename="js/center/echarts.min.js" ) }}"></script>
+<script src="{{ url_for( "static", filename="js/center/main.js" ) }}"></script>
+</body>
+</html>

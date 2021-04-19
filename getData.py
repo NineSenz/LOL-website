@@ -92,7 +92,24 @@ def register(user):
     finally:
         con.close()
 
-
+def updateuserinfo(user):
+    con = pymysql.connect(host='localhost', user='root', password='bettertree@123', database='lol', port=3306)
+    # 创建游标对象
+    cur = con.cursor()
+    # 编写插入数据的sql
+    sql = 'UPDATE user SET username=%s, mobile=%s,gender=%s, area=%s, motto=%s WHERE(id=%s)'
+    try:
+        # 执行sql
+        cur.executemany(sql, [(user["username"], user["mobile"], user["gender"], user["area"], user["motto"], user["userid"])])
+        # 提交事务
+        con.commit()
+        print('插入成功')
+    except Exception as e:
+        print(e)
+        con.rollback()
+        print('插入失败')
+    finally:
+        con.close()
 
 def check(username):
     sql = "SELECT * FROM user WHERE username='%s" % username + "'"
@@ -101,6 +118,18 @@ def check(username):
     print(check)
     return check
 
+
+def getUserIdByUsername(username):
+    sql = "SELECT id FROM user WHERE username='%s" % username + "'"
+    print(sql)
+    userid = execte_db(sql)
+    return userid[0][0]
+
+def getUserInfoById(id):
+    sql = "SELECT * FROM user WHERE id='%s" % id + "'"
+    print(sql)
+    userinfo = execte_db(sql)
+    return userinfo
 
 def newskin():
     filename = os.path.join(app.static_folder, 'data/newskin.json')
