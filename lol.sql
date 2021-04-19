@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50732
 File Encoding         : 65001
 
-Date: 2021-04-14 18:41:43
+Date: 2021-04-19 18:05:08
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -98,6 +98,12 @@ CREATE TABLE `issue` (
 -- ----------------------------
 -- Records of issue
 -- ----------------------------
+INSERT INTO `issue` VALUES ('1', 'image/index_image/banner1.jpg', '04-08', '1', 'image/index_image/0(19).jpg', '2019LPL夏季赛赛程公布');
+INSERT INTO `issue` VALUES ('2', 'image/index_image/banner2.jpg', '04-08', '1', 'image/index_image/0(19).jpg', '2019LPL夏季赛赛程公布');
+INSERT INTO `issue` VALUES ('3', 'image/index_image/banner3.jpg', '04-08', '1', 'image/index_image/0(19).jpg', '2019LPL夏季赛赛程公布');
+INSERT INTO `issue` VALUES ('4', 'image/index_image/banner4.jpg', '04-08', '0', 'image/index_image/0(19).jpg', '2019LPL夏季赛赛程公布');
+INSERT INTO `issue` VALUES ('5', 'image/index_image/banner5.jpg', '04-08', '0', 'image/index_image/0(19).jpg', '2019LPL夏季赛赛程公布');
+INSERT INTO `issue` VALUES ('6', 'image/index_image/banner1.jpg', '04-08', '1', 'image/index_image/0(19).jpg', '2019LPL夏季赛赛程公布');
 
 -- ----------------------------
 -- Table structure for link
@@ -112,6 +118,9 @@ CREATE TABLE `link` (
 -- ----------------------------
 -- Records of link
 -- ----------------------------
+INSERT INTO `link` VALUES ('1', '在线客服');
+INSERT INTO `link` VALUES ('2', '秩序殿堂');
+INSERT INTO `link` VALUES ('3', '游戏资料');
 
 -- ----------------------------
 -- Table structure for newhero
@@ -126,6 +135,20 @@ CREATE TABLE `newhero` (
 -- ----------------------------
 -- Records of newhero
 -- ----------------------------
+INSERT INTO `newhero` VALUES ('1', 'image/index_image/free1.png');
+INSERT INTO `newhero` VALUES ('2', 'image/index_image/free1.png');
+INSERT INTO `newhero` VALUES ('3', 'image/index_image/free2.png');
+INSERT INTO `newhero` VALUES ('4', 'image/index_image/free3.png');
+INSERT INTO `newhero` VALUES ('5', 'image/index_image/free4.png');
+INSERT INTO `newhero` VALUES ('6', 'image/index_image/free5.png');
+INSERT INTO `newhero` VALUES ('7', 'image/index_image/free6.png');
+INSERT INTO `newhero` VALUES ('8', 'image/index_image/free7.png');
+INSERT INTO `newhero` VALUES ('9', 'image/index_image/free8.png');
+INSERT INTO `newhero` VALUES ('10', 'image/index_image/free9.png');
+INSERT INTO `newhero` VALUES ('11', 'image/index_image/free10.png');
+INSERT INTO `newhero` VALUES ('12', 'image/index_image/free11.png');
+INSERT INTO `newhero` VALUES ('13', 'image/index_image/free12.png');
+INSERT INTO `newhero` VALUES ('14', 'image/index_image/free13.png');
 
 -- ----------------------------
 -- Table structure for newskin
@@ -141,6 +164,20 @@ CREATE TABLE `newskin` (
 -- ----------------------------
 -- Records of newskin
 -- ----------------------------
+INSERT INTO `newskin` VALUES ('1', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
+INSERT INTO `newskin` VALUES ('2', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
+INSERT INTO `newskin` VALUES ('3', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
+INSERT INTO `newskin` VALUES ('4', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
+INSERT INTO `newskin` VALUES ('5', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
+INSERT INTO `newskin` VALUES ('6', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
+INSERT INTO `newskin` VALUES ('7', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
+INSERT INTO `newskin` VALUES ('8', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
+INSERT INTO `newskin` VALUES ('9', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
+INSERT INTO `newskin` VALUES ('10', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
+INSERT INTO `newskin` VALUES ('11', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
+INSERT INTO `newskin` VALUES ('12', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
+INSERT INTO `newskin` VALUES ('13', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
+INSERT INTO `newskin` VALUES ('14', 'image/index_image/champion2.jpg', '我们的冠军皮肤');
 
 -- ----------------------------
 -- Table structure for notice
@@ -213,6 +250,32 @@ INSERT INTO `tophero` VALUES ('9', 'image/psp_image/Darius.png', '諾克薩斯�
 INSERT INTO `tophero` VALUES ('10', 'image/psp_image/Darius.png', '諾克薩斯之手');
 
 -- ----------------------------
+-- Table structure for user
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `mobile` varchar(255) DEFAULT NULL,
+  `gender` varchar(255) DEFAULT NULL,
+  `area` varchar(255) DEFAULT NULL,
+  `avater` varchar(255) DEFAULT NULL,
+  `motto` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES ('1', '123@123.com', 'Larry', '123456', '', '男', '0', null, '');
+INSERT INTO `user` VALUES ('2', '12323@qq.com', 'qwerty', 'qwerty', '110', null, null, null, null);
+INSERT INTO `user` VALUES ('9', '444@11.com', '635434', '444444', '132622253434', null, null, null, null);
+INSERT INTO `user` VALUES ('10', '444@11.com', '635434', '444444', '132622253434', null, null, null, null);
+INSERT INTO `user` VALUES ('11', '123@dd.cc', '131', '12345623', '12312', '男', '1', null, '123123123');
+
+-- ----------------------------
 -- Table structure for video
 -- ----------------------------
 DROP TABLE IF EXISTS `video`;
@@ -228,3 +291,11 @@ CREATE TABLE `video` (
 -- ----------------------------
 -- Records of video
 -- ----------------------------
+INSERT INTO `video` VALUES ('1', 'image/index_image/258(3).jpg', '试炼2019为荣誉而战', '234', '04-08');
+INSERT INTO `video` VALUES ('2', 'image/index_image/258(3).jpg', '试炼2019为荣誉而战', '434', '04-08');
+INSERT INTO `video` VALUES ('3', 'image/index_image/258(3).jpg', '试炼2019为荣誉而战', '543', '04-08');
+INSERT INTO `video` VALUES ('4', 'image/index_image/258(3).jpg', '试炼2019为荣誉而战', '234', '04-08');
+INSERT INTO `video` VALUES ('5', 'image/index_image/258(3).jpg', '试炼2019为荣誉而战', '8', '04-08');
+INSERT INTO `video` VALUES ('6', 'image/index_image/258(3).jpg', '试炼2019为荣誉而战', '67', '04-08');
+INSERT INTO `video` VALUES ('7', 'image/index_image/258(3).jpg', '试炼2019为荣誉而战', '45', '04-08');
+INSERT INTO `video` VALUES ('8', 'image/index_image/258(3).jpg', '试炼2019为荣誉而战', '23', '04-08');
