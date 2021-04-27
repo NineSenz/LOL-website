@@ -170,7 +170,8 @@ def edituser(id):
             "motto": motto
         }
         result = getData.updateuserinfo(user)
-        return render_template('center/usercenter.html')
+        data = getData.getUserInfoById(id)
+        return render_template('center/usercenter.html', items=data)
 
 @app.route('/create')
 def create():

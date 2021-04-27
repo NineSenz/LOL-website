@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>LarryBlogCMS-Home</title>
+	<title>LOL官網 - 個人中心</title>
     <link  rel="shortcut icon" href="{{ url_for( "static", filename="favicon.ico" ) }}">
     <link href="{{ url_for( "static", filename="css/header.css" ) }}" rel="stylesheet" />
 	<link href="{{ url_for( "static", filename="css/login/login.css" ) }}" rel="stylesheet" />
@@ -75,7 +75,7 @@
 			<span>个人信息</span>
 		</header><!-- /header -->
 		<div class="larry-personal-body clearfix">
-			<form class="layui-form col-lg-5" action="/edituser" method="post">
+			<form class="layui-form col-lg-5" action="/edituser/{{ items[0][0] }}" method="post">
 				<div class="layui-form-item">
 					<label class="layui-form-label">玩家ID</label>
 					<div class="layui-input-block">
@@ -129,7 +129,7 @@
 
 				<div class="layui-form-item">
 					<div class="layui-input-block">
-						<button class="layui-btn" lay-submit="">立即提交</button>
+						<input type="submit" class="layui-btn" lay-submit="" value="立即提交">
 						<button type="reset" class="layui-btn layui-btn-primary">重置</button>
 					</div>
 				</div>
