@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 def execte_db(sql):
-    conn = pymysql.connect(host="127.0.0.1", user="root", password="bettertree@123", database="lol", charset="utf8")
+    conn = pymysql.connect(host="47.116.66.57", user="lol", password="123456", database="lol", charset="utf8")
     cursor = conn.cursor()
     cursor.execute(sql)
     result = cursor.fetchall()
@@ -74,7 +74,7 @@ def register(user):
     username = user["username"]
     password = user["password"]
     mobile = user["mobile"]
-    con = pymysql.connect(host='localhost', user='root', password='bettertree@123', database='lol', port=3306)
+    con = pymysql.connect(host='47.116.66.57', user='lol', password='123456', database='lol', port=3306)
     # 创建游标对象
     cur = con.cursor()
     # 编写插入数据的sql
@@ -93,7 +93,7 @@ def register(user):
         con.close()
 
 def updateuserinfo(user):
-    con = pymysql.connect(host='localhost', user='root', password='bettertree@123', database='lol', port=3306)
+    con = pymysql.connect(host='47.116.66.57', user='lol', password='123456', database='lol', port=3306)
     # 创建游标对象
     cur = con.cursor()
     # 编写插入数据的sql

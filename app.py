@@ -81,14 +81,15 @@ def login():
         password = data['password']
         result = getData.login(username, password)
         if len(result) == 0:
+            print(type('0'))
             return '0'
         else:
             userid = getData.getUserIdByUsername(username)
             aa = {
                 "id": userid
             }
-            print(aa)
-            return aa
+            bb = json.dumps(aa)
+            return bb
 
 
 @app.route('/register/', methods=['GET', 'POST'])
