@@ -119,7 +119,7 @@
 				<form>
 					<input class="form-item" type="text" id="username" placeholder="賬號" /><br>
 					<input class="form-item" type="password" id="password" placeholder="密碼"><br>
-					<button type="submit" value="Submit" class="form-item btn" onclick="val()" >立即登錄</button><br>
+					<input type="button" class="form-item btn" onclick="val()" value="立即登錄"/><br>
 				</form>
 			</section>
 
@@ -137,27 +137,25 @@
                                 'password': password
                             }),
                         }
-                        alert(username);
-                        $.ajax({
-                        url:"/login",
-                        type:"POST",
-                        data: data,
-                        dataType:"text",
-                        success:function(result){
-                            alert("aaaaaaaaaaaaa")
-                            if(result=="0"){
-                                alert("用戶名或密碼錯誤")
-                                $("#upwd").val("");
-
-                            }else{
-                                var num= result.replace(/[^0-9]/ig,"");
-                                alert("用戶ID:" + num + ", 歡迎回來");
-                                window.location.href="/edituser/"+num;
+                        $.post({
+                            url:"/login",
+                            data: data,
+                            dataType:"text",
+                            success:function(result){
+                                if(result=="0"){
+                                    alert("用戶名或密碼錯誤");
+                                    $("#upwd").val("");
+                                }else{
+                                    var num= result.replace(/[^0-9]/ig,"");
+                                    window.location.href="/edituser/"+num;
+                                }
+                            },
+                            error:function(result){
+                                console.log(result);
+                                alert(result);
                             }
-                        }
-                    })
+                        })
                     }
-					return true;
 				}
 			</script>
 	

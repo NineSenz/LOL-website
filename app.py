@@ -81,12 +81,11 @@ def login():
         password = data['password']
         result = getData.login(username, password)
         if len(result) == 0:
-            print(type('0'))
             return '0'
         else:
             userid = getData.getUserIdByUsername(username)
             aa = {
-                "id": userid
+                "id": "11"
             }
             bb = json.dumps(aa)
             return bb
